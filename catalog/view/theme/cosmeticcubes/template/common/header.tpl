@@ -695,7 +695,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 
 										<div id="televendas" class="col-sm-3">
 											<img src="./catalog/view/theme/cosmeticcubes/img/televendas.png" alt="TeleVendas"/>
-											<!-- <span id="tele">Televendas</span><span id="fone">(51) 3444-3920</span> -->
+											<img src="./catalog/view/theme/cosmeticcubes/img/conheca-loja-fisica.png" alt="Conheça nossa loja física"/>
 										</div>
 									</div>
 								</div>
