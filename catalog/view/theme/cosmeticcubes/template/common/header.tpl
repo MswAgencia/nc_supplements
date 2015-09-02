@@ -672,7 +672,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 									</div>
 									<div id="header-right" class="col-sm-9">
 										<?php
-											if($_SERVER['REQUEST_URI'] == '/loja/index.php?route=common/home'){
+											if($_SERVER['REQUEST_URI'] == '/loja/index.php?route=common/home' || $_SERVER['REQUEST_URI'] == '/loja/'){
 												?>
 
 										<div class="col-sm-8">
@@ -690,9 +690,8 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 											</script>
 										</div>
 										<?php
-										echo $_SERVER['REQUEST_URI'];
-										}?>
-
+									}
+									?>
 										<div id="televendas" class="col-sm-3">
 											<img src="./catalog/view/theme/cosmeticcubes/img/televendas.png" alt="TeleVendas"/>
 											<img src="./catalog/view/theme/cosmeticcubes/img/conheca-loja-fisica.png" alt="Conheça nossa loja física"/>
