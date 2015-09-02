@@ -1,0 +1,26 @@
+<modification>
+  <id>Product Name Clickable in Product and Categories List</id>
+  <version>2</version>
+  <vqmver>2.5.0</vqmver>
+  <author>forgetfulguru</author>
+  <file path="admin/view/template/catalog/" name="product_list.tpl">
+    <operation>
+      <search position="replace">
+        <![CDATA[<td class="text-left"><?php echo $product['name']; ?></td>]]>
+      </search>
+      <add>
+        <![CDATA[<td class="text-left"><a href="<?php echo $product['edit']; ?>" data-toggle="tooltip" title="<?php echo $button_edit; ?>"><?php echo $product['name']; ?></a></td>]]>
+      </add>
+    </operation>
+  </file>
+  <file path="admin/view/template/catalog/" name="category_list.tpl">
+    <operation>
+      <search position="replace">
+        <![CDATA[<td class="text-left"><?php echo $category['name']; ?></td>]]>
+      </search>
+      <add>
+        <![CDATA[<td class="text-left"><a href="<?php echo $category['edit']; ?>" data-toggle="tooltip" title="<?php echo $button_edit; ?>"><?php echo $category['name']; ?></a></td>]]>
+      </add>
+    </operation>
+  </file>
+</modification>

@@ -1,0 +1,114 @@
+---------- Date: 2015-08-14 05:10:32 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/suplementos-ganho-massa-muscular
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): class="img-responsive" /></a>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-14 05:10:33 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : catalog/view/theme/*/template/module/featured.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): class="img-responsive" /></a>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-14 05:15:18 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/suplementos-ganho-massa-muscular
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/install.xml
+   id        : 
+   version   : 2.0
+   vqmver    : 
+   author    : rlasmar
+
+File Name    : catalog/view/theme/*/template/common/footer.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): </footer>
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): class="img-responsive" /></a>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-14 05:33:26 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/kits-promocionais
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): class="img-responsive" /></a>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-14 05:33:30 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/plano-anual-suplementos
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(3)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php echo $stock; ?></li>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-14 07:09:07 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/index.php?route=common/home
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : catalog/view/theme/*/template/module/featured.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): class="img-responsive" /></a>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-14 18:35:44 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/kits-promocionais
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): class="img-responsive" /></a>
+
+----------------------------------------------------------------------
+
+

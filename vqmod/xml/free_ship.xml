@@ -1,0 +1,74 @@
+<modification>
+	 <file name="catalog/view/theme/*/template/common/header.tpl">
+		<operation>
+		  <search position="before"><![CDATA[<?php foreach ($styles as $style) { ?>]]></search>
+		  <add><![CDATA[
+			<style type="text/css">
+				.free-ship-label {
+					background: url('image/data/free_ship.png') no-repeat;
+					width: 70px;
+					height: 70px;
+					position: absolute;
+					float: right;
+					right: 12px;
+					top: -3px;
+					z-index: 99;
+				}
+			</style>
+		]]></add>
+		</operation>
+	</file>  
+	<file name="catalog/model/catalog/product.php">
+        <operation>
+            <search position="after" index="1"><![CDATA['date_modified'    => $query->row['date_modified'],]]></search>
+			<add><![CDATA[
+				'shippingstatus'           => $query->row['shipping'],
+			]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/product/product.php">
+        <operation>
+            <search position="after" index="1"><![CDATA[if ($product_info) {]]></search>
+			<add><![CDATA[
+				if ($product_info['shippingstatus']) {
+					$data['freeship'] = 0;
+				} else {$data['freeship'] = 1;}
+			]]></add>
+		</operation>
+	</file>
+	 <file name="catalog/view/theme/*/template/product/product.tpl">
+        <operation>
+			<search position="after"><![CDATA[<ul class="thumbnails">]]></search>	
+			<add><![CDATA[
+				<?php if ($freeship) {?>
+					<div class="free-ship-label"></div>
+				<?php }?>
+			]]></add>
+		</operation>
+	</file>
+
+
+<!-- Featured Module -->	
+<!-- Available at next version -->
+<!--
+	<file name="catalog/controller/module/featured.php">
+        <operation>
+            <search position="after" index="1"><![CDATA['rating'      => $rating,]]></search>
+			<add><![CDATA[
+				'shippingstatus'      => $product_info['shippingstatus'],
+			]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/module/featured.tpl">
+		<operation>
+		  <search position="after"><![CDATA[<div class="product-thumb transition">]]></search>		   
+		  <add><![CDATA[
+				<?php if ($shippingstatus = 0) {?>
+					<div class="free-ship-label"></div>
+				<?php }?>
+				<?php echo $shippingstatus; ?>
+		  ]]></add>
+		</operation>
+	</file>
+-->	
+</modification>

@@ -1,0 +1,17 @@
+<modification>
+	<id><![CDATA[]]></id>
+	<version><![CDATA[1.0]]></version>
+	<vqmver><![CDATA[2.x]]></vqmver>
+	<author><![CDATA[Shirttools.com]]></author>
+	<file path="admin/controller/catalog/" name="product.php">
+		<operation>
+			<search position="before"><![CDATA[$this->load->model('sale/customer_group');]]></search>
+			<add>
+				<![CDATA[
+				function option_name_sorter_test($a, $b){return strcmp($a["name"], $b["name"]);}
+				foreach($this->data['option_values'] as $key=>$ov){usort($ov, "option_name_sorter_test");$this->data['option_values'][$key] = $ov;}
+				]]>
+			</add>
+		</operation>
+	</file>
+</modification>

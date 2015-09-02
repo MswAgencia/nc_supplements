@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+  <name>viethemes - Facebook Share Hotfix</name>
+  <code>vie_facebook_share_hotfix</code>
+  <version>1.0</version>
+  <author>viethemes</author>
+  <link>http://www.viethemes.com</link>
+
+  <file path="catalog/view/theme/*/template/product/product.tpl">
+    <operation>
+      <search><![CDATA[<?php echo $header; ?>]]></search>
+      <add position="replace"><![CDATA[
+        <?php echo str_replace('</head>', '<meta property="og:image" content="'. $thumb .'"/><meta property="og:title" content="'. $heading_title .'"/><meta property="og:description" content="'. preg_replace('#\s+#', ' ', strip_tags($description)) .'" /></head>', $header); ?>
+      ]]></add>
+    </operation>
+  </file>
+
+</modification>

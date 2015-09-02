@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <id>Campo Número Obrigatório</id>
+    <version>1.0</version>
+    <vqmver>2.5.1</vqmver>
+    <author>César Henrique</author>
+
+	<file name="catalog/view/theme/*/template/account/address_form.tpl,catalog/view/theme/*/template/account/register.tpl">
+        <operation>
+            <search position="replace"><![CDATA[<div class="form-group">]]></search>
+            <add>
+			<![CDATA[
+			<div class="form-group required">
+			]]></add>
+        </operation>              
+		
+		<operation>
+            <search position="replace"><![CDATA[<input type="text" name="company" value="<?php echo $company; ?>" placeholder="<?php echo $entry_company; ?>" id="input-company" class="form-control" />]]></search>
+            <add>
+			<![CDATA[
+			<input type="text" name="company" value="<?php echo $company; ?>" placeholder="<?php echo $entry_company; ?>" id="input-company" class="form-control" />
+              <?php if ($error_company) { ?>
+              <div class="text-danger"><?php echo $error_company; ?></div>
+              <?php } ?>
+			]]></add>
+        </operation>
+		
+		<operation>
+            <search position="replace"><![CDATA[<input type="text" name="address_2" value="<?php echo $address_2; ?>" placeholder="<?php echo $entry_address_2; ?>" id="input-address-2" class="form-control" />]]></search>
+            <add>
+			<![CDATA[
+			<input type="text" name="address_2" value="<?php echo $address_2; ?>" placeholder="<?php echo $entry_address_2; ?>" id="input-address-2" class="form-control" />
+			<?php if ($error_address_2) { ?>
+            <div class="text-danger"><?php echo $error_address_2; ?></div>
+            <?php } ?>
+			]]></add>
+        </operation>
+    </file>
+	
+	<file name="catalog/controller/account/register.php">
+        <operation>
+            <search position="before"><![CDATA[if (isset($this->error['city'])) {]]></search>
+            <add>
+			<![CDATA[if (isset($this->error['company'])) {
+			$data['error_company'] = $this->error['company'];
+				} else {
+			$data['error_company'] = '';
+			}
+		//adicionado
+		if (isset($this->error['address_2'])) {
+			$data['error_address_2'] = $this->error['address_2'];
+		} else {
+			$data['error_address_2'] = '';
+		}
+			]]></add>
+        </operation>
+		
+		<operation>
+            <search position="before"><![CDATA[if ((utf8_strlen(trim($this->request->post['city'])) < 2) || (utf8_strlen(trim($this->request->post['city'])) > 128)) {]]></search>
+			<add><![CDATA[if ((utf8_strlen(trim($this->request->post['company'])) < 3) || (utf8_strlen(trim($this->request->post['company'])) > 128)) {
+			$this->error['company'] = $this->language->get('error_company');
+		}
+		if ((utf8_strlen(trim($this->request->post['address_2'])) < 3) || (utf8_strlen(trim($this->request->post['address_2'])) > 128)) {
+			$this->error['address_2'] = $this->language->get('error_address_2');
+		}
+		]]></add>
+		</operation>
+	</file>
+	
+    <file name="catalog/language/*/account/register.php">
+		<operation>
+            <search position="after"><![CDATA[ // Error ]]></search>
+            <add><![CDATA[$_['error_company']        = 'O número para entrega é obrigatório';
+			$_['error_address_2']        = 'O bairro é obrigatório';
+			]]></add>
+        </operation>
+		
+		<operation>
+            <search position="replace"><![CDATA[$_['entry_company']]]></search>
+            <add><![CDATA[$_['entry_company']        = 'Número';//]]></add>
+        </operation>
+		
+    </file>
+	
+	<file name="catalog/language/*/account/address.php">
+		<operation>
+            <search position="replace"><![CDATA[$_['entry_company']]]></search>
+            <add><![CDATA[$_['entry_company']        = 'Número';//]]></add>
+        </operation>
+		
+    </file>
+</modification>

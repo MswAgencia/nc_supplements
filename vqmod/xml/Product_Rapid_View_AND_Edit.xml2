@@ -1,0 +1,108 @@
+<modification>
+	<id>Pré-Visualização Rápida do Produto</id>
+	<version>For OpenCart V2.0.x</version>
+	<vqmver>1.3</vqmver>
+	<author>lucmastercontato@gmail.com</author>
+
+		<!-- language -->
+
+	<file name="admin/language/english/catalog/product.php">
+
+    <operation>
+
+    	<search position="before"><![CDATA[
+		$_['column_image']           = 'Image';
+			]]></search>
+			<add><![CDATA[	
+         $_['help_look']              = 'Visualizar';
+		 $_['help_look_no']           = 'You can not view unpublished';
+    	]]></add>
+		
+    </operation>
+
+	</file>
+		
+		<!-- controller -->
+
+	<file name="admin/controller/catalog/product.php">
+
+    <operation>
+
+    	<search position="after"><![CDATA[
+		 $data['text_form'] = !isset($this->request->get['product_id']) ? $this->language->get('text_add') : $this->language->get('text_edit');
+			]]></search>
+
+			<add><![CDATA[	
+         $data['product_id'] = !isset($this->request->get['product_id']) ? '' : $this->request->get['product_id'];
+    	]]></add>
+	</operation>
+		
+	<operation>	
+		<search position="after"><![CDATA[
+		 $data['column_image'] = $this->language->get('column_image');
+			]]></search>
+
+		<add><![CDATA[$data['help_look'] = $this->language->get('help_look');]]></add>
+		
+    </operation>
+	
+	<operation>	
+		<search position="after"><![CDATA[
+		 $data['text_enabled'] = $this->language->get('text_enabled');
+			]]></search>
+
+		<add><![CDATA[
+		$data['help_look'] = $this->language->get('help_look');
+		$data['help_look_no'] = $this->language->get('help_look_no');
+		]]></add>
+		
+    </operation>
+
+	</file>
+	
+	<file name="admin/view/template/catalog/product_list.tpl">
+
+    <operation>
+
+    	<search position="replace"><![CDATA[
+		  <a href="<?php echo $product['edit']; ?>" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
+			]]></search>
+			
+			<add><![CDATA[
+			<a onclick="if(navigator.userAgent.toLowerCase().indexOf('opera') != -1 &amp;&amp; window.event.preventDefault) window.event.preventDefault();this.newWindow = window.open('<?php echo $product['edit']; ?>','_blank','toolbar=0, scrollbars=0, location=0, status=1, menubar=0, left=75, top=50, width=1000, height=500, resizable=1');this.newWindow.focus();this.newWindow.opener=window;return false;" data-toggle="tooltip" title="" class="btn btn-info" data-original-title="<?php echo $button_edit; ?>"><i class="fa fa-pencil"></i></a>
+			<p></p>
+			<a href="<?php echo $product['edit']; ?>" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
+			<p></p>
+			<a onclick="if(navigator.userAgent.toLowerCase().indexOf('opera') != -1 &amp;&amp; window.event.preventDefault) window.event.preventDefault();this.newWindow = window.open('<?php echo HTTP_CATALOG ; ?>index.php?route=product/product&product_id=<?php echo $product['product_id']; ?>','_blank','toolbar=0, scrollbars=0, location=0, status=1, menubar=0, left=75, top=50, width=1000, height=500, resizable=1');this.newWindow.focus();this.newWindow.opener=window;return false;" data-toggle="tooltip" title="" class="btn btn-info" data-original-title="<?php echo $product['name']; ?>"><i class="fa fa-eye"></i></a>
+		]]></add>
+
+    </operation>
+
+	</file>
+	
+		<!-- FORM -->
+
+	<file name="admin/view/template/catalog/product_form.tpl">
+
+    <operation>
+
+    	<search position="before"><![CDATA[
+		 <button type="submit" form="form-product" data-toggle="tooltip" title="<?php echo $button_save; ?>" class="btn btn-primary"><i class="fa fa-save"></i></button>
+			]]></search>
+
+			<add><![CDATA[	
+			<?php if ($keyword!='') { ?>
+         <a onclick="if(navigator.userAgent.toLowerCase().indexOf('opera') != -1 &amp;&amp; window.event.preventDefault) window.event.preventDefault();this.newWindow = window.open('<?php echo HTTP_CATALOG ; ?>index.php?route=product/product&product_id=<?php echo $product_id; ?>','_blank','toolbar=0, scrollbars=0, location=0, status=1, menubar=0, left=75, top=50, width=1000, height=500, resizable=1');this.newWindow.focus();this.newWindow.opener=window;return false;" data-toggle="tooltip" title="" class="btn btn-info" data-original-title="<?php echo $help_look; ?>"><i class="fa fa-eye"></i></a>
+		 <?php } elseif($product_id!='') { ?>
+		<a onclick="if(navigator.userAgent.toLowerCase().indexOf('opera') != -1 &amp;&amp; window.event.preventDefault) window.event.preventDefault();this.newWindow = window.open('<?php echo HTTP_CATALOG ; ?>index.php?route=product/product&product_id=<?php echo $product_id; ?>','_blank','toolbar=0, scrollbars=0, location=0, status=1, menubar=0, left=75, top=50, width=1000, height=500, resizable=1');this.newWindow.focus();this.newWindow.opener=window;return false;" data-toggle="tooltip" title="" class="btn btn-info" data-original-title="<?php echo $help_look; ?>"><i class="fa fa-eye"></i></a>
+		<?php } else { ?>
+		 <a data-toggle="tooltip" title="" style="background-color: #ECECEC;" class="btn btn-primary" data-original-title="<?php echo $help_look_no ;?>"><i class="fa fa-eye"></i></a>
+		<?php } ?>
+    	]]></add>
+
+    </operation>
+
+	</file>
+	
+
+</modification>

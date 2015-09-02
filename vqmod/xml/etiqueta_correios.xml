@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <id>Etiqueta Padrão Correios Com Chancela</id>
+    <version>1.0</version>
+    <vqmver>2.5.1</vqmver>
+    <author>César Henrique</author>
+    
+    <!-- Adicione o botão à página do pedido -->
+    <file name="admin/view/template/sale/order_info.tpl">
+        <operation>
+            <search position="before"><![CDATA[<a href="<?php echo $invoice; ?>" target="_blank" data-toggle="tooltip" title="<?php echo $button_invoice_print; ?>" class="btn btn-info">]]></search>
+            <add><![CDATA[<div style="float: right; margin-left: 3px;"><a href="<?php echo $sticker; ?>" target="_blank" data-toggle="tooltip" title="<?php echo $button_address; ?>" class="btn btn-success"><i class="fa fa-file-text"></i></a></div>]]></add>
+        </operation>
+    </file>
+    
+	<!-- Setar algumas coisas -->
+    <file name="admin/controller/sale/order.php">
+        <operation>
+            <search position="after"><![CDATA[ $data['invoice'] = $this->url->link('sale/order/invoice', 'token=' . $this->session->data['token'], 'SSL'); ]]></search>
+            <add><![CDATA[ $data['sticker'] = $this->url->link('sale/order/sticker', 'token=' . $this->session->data['token'] . $url, 'SSL'); ]]></add>
+        </operation>
+        
+        <operation>
+            <search position="after"><![CDATA[ $data['button_invoice_print'] = $this->language->get('button_invoice_print'); ]]></search>
+            <add><![CDATA[ $data['button_address'] = $this->language->get('button_address'); ]]></add>
+        </operation>
+        
+        <operation>
+            <search position="after"><![CDATA[ $data['invoice'] = $this->url->link('sale/order/invoice', 'token=' . $this->session->data['token'] . '&order_id=' . (int)$this->request->get['order_id'], 'SSL'); ]]></search>
+            <add><![CDATA[  $data['sticker'] = $this->url->link('sale/order/sticker', 'token=' . $this->session->data['token'] . '&order_id=' . (int)$this->request->get['order_id'], 'SSL'); ]]></add>
+        </operation>
+        
+        <operation> 
+            <search position="before"><![CDATA[ public function createInvoiceNo() { ]]></search>
+            <add><![CDATA[ public function sticker() {
+		$this->load->language('sale/order');
+
+		$data['title'] = $this->language->get('heading_title');
+
+		if (isset($this->request->server['HTTPS']) && (($this->request->server['HTTPS'] == 'on') || ($this->request->server['HTTPS'] == '1'))) {
+			$data['base'] = HTTPS_SERVER;
+		} else {
+			$data['base'] = HTTP_SERVER;
+		}
+		
+		$this->load->model('sale/order');
+
+		if (isset($this->request->post['selected'])) {
+			$orders = $this->request->post['selected'];
+		} elseif (isset($this->request->get['order_id'])) {
+			$orders[] = $this->request->get['order_id'];
+		}
+
+		foreach ($orders as $order_id) {
+			$order_info = $this->model_sale_order->getOrder($order_id);
+
+			if ($order_info) {
+					$format = '{firstname} {lastname}' . "\n" . '{address_1} {company}' . "\n" . '{address_2}' . "\n" . '{city}' . "/" . '{zone_code}' . "\n" . '{postcode}' . "\n" . '{country}';
+				
+				$find = array(
+					'{firstname}',
+					'{lastname}',
+					'{company}',
+					'{address_1}',
+					'{address_2}',
+					'{city}',
+					'{postcode}',
+					'{zone}',
+					'{zone_code}',
+					'{country}',
+					'{telephone}'
+				);
+
+				$replace = array(
+					'firstname' => $order_info['shipping_firstname'],
+					'lastname' => $order_info['shipping_lastname'],
+					'company' => $order_info['shipping_company'],
+					'address_1' => $order_info['shipping_address_1'],
+					'address_2' => $order_info['shipping_address_2'],
+					'city' => $order_info['shipping_city'],
+					'postcode' => $order_info['shipping_postcode'],
+					'zone' => $order_info['shipping_zone'],
+					'zone_code' => $order_info['shipping_zone_code'],
+					'country' => $order_info['shipping_country'],
+					'telephone' => $order_info['telephone']
+				);
+
+				$shipping_address = str_replace(array("\r\n", "\r", "\n"), '<br />', preg_replace(array("/\s\s+/", "/\r\r+/", "/\n\n+/"), '<br />', trim(str_replace($find, $replace, $format))));
+
+				$data['orders'][] = array(
+					'store_name'       	=> $order_info['store_name'],
+					'correios'       	=> $order_info['shipping_code'],
+					'store_url'        	=> rtrim($order_info['store_url'], '/'),
+					'endereco-loja'		=> nl2br($this->config->get('config_address')),
+					'telefone-loja' 	=> $this->config->get('config_telephone'),
+					'fax'              	=> $this->config->get('config_fax'),
+					'email'            	=> $this->config->get('config_email'),
+					'shipping_address' 	=> $shipping_address,
+					'cep' 				=> $order_info['shipping_postcode'],
+					'telefone'			=> $data['telephone'] = $order_info['telephone'],
+					'customer_email'   	=> $order_info['email'],
+				);
+			}
+		}
+	$this->response->setOutput($this->load->view('sale/etiqueta_correios.tpl', $data));
+	}  ]]></add>
+        </operation>
+    </file>  
+    
+	<!-- Tradução do título do botão -->
+    <file name="admin/language/*/sale/order.php">
+        <operation>
+            <search position="before"><![CDATA[  // Entry ]]></search>
+            <add><![CDATA[ $_['button_address'] = 'Imprimir Etiqueta dos Correios'; ]]></add>
+
+        </operation>
+    </file>
+</modification>

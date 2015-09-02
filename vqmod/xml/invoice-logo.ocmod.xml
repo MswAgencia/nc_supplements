@@ -1,0 +1,33 @@
+<modification>
+	<name>Invoice Logo</name>
+	<version>1.2</version>
+	<vqmver>2.3.2</vqmver>
+	<author>peku</author>
+	<code>X9893</code>
+	<file path="admin/controller/sale/order.php">
+		<operation>
+			<search><![CDATA[public function invoice() {]]></search>
+			<add position="after"><![CDATA[                                              $data['logo'] = HTTP_CATALOG . 'image/' . $this->config->get('config_logo');]]></add>
+		</operation>
+	</file>
+	<file path="admin/controller/sale/order.php">
+		<operation>
+			<search><![CDATA[public function shipping() {]]></search>
+			<add position="after"><![CDATA[                                              $data['logo'] = HTTP_CATALOG . 'image/' . $this->config->get('config_logo');]]></add>
+		</operation>
+	</file>
+	<file path="admin/view/template/sale/order_invoice.tpl">
+		<operation>
+			<search><![CDATA[<strong><?php echo $order['store_name']; ?></strong>]]></search>
+			<add position="replace"><![CDATA[<img src="<?php echo $logo;?>" alt="<?php echo $order['store_name'];?>" title="<?php echo $order['store_name'];?>"/>
+                                                                     <br/>]]></add>
+		</operation>
+	</file>
+	<file path="admin/view/template/sale/order_shipping.tpl">
+		<operation>
+			<search><![CDATA[<strong><?php echo $order['store_name']; ?></strong>]]></search>
+			<add position="replace"><![CDATA[<img src="<?php echo $logo;?>" alt="<?php echo $order['store_name'];?>" title="<?php echo $order['store_name'];?>"/>
+                                                                     <br/>]]></add>
+		</operation>
+	</file>
+</modification>

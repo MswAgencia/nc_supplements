@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>Product Weight in Category</id>
+	<version>OC v2.0.3.x</version>
+	<author>Ernie - IP_CAM</author>
+	<authorUrl>http://www.jacob.ch</authorUrl>
+	<file name="catalog/controller/product/category.php">
+	<operation error="log">
+       <search position="after"><![CDATA[
+		'rating'      => $result['rating'],
+       ]]></search>
+       <add><![CDATA[
+       'weight'            => sprintf($this->weight->format($result['weight'], $result['weight_class_id']), $this->language->get('text_product_weight')),
+       ]]></add>
+       </operation>
+	</file>
+	<file name="catalog/view/theme/*/template/product/category.tpl">
+       <operation error="log">
+       <search position="replace"><![CDATA[
+	   	<div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
+       ]]></search>
+       <add><![CDATA[
+	<h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h4>
+	<p><?php if ($product['weight'] >= '1') { ?>
+	  <span>Weight: <?php echo $product['weight']; ?>
+		</span></p>
+       <?php } ?>
+       ]]></add>
+       </operation>
+	</file>
+</modification>

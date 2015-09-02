@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+@category  : OpenCart
+@module    : Wishlist without login
+@author    : OCdevWizard <ocdevwizard@gmail.com> 
+@copyright : Copyright (c) 2015, OCdevWizard
+@license   : http://license.ocdevwizard.com/Licensing_Policy.pdf
+-->
+
+<modification>
+  <id>Wishlist without login</id>
+  <version>1.5.5.x</version>
+  <vqmver required="true">2.4.0</vqmver>
+  <author>ocdevwizard@gmail.com</author>
+  <file name="catalog/controller/account/wishlist.php">
+    <operation error="skip">
+      <search position="replace" offset="5"><![CDATA[if (!$this->customer->isLogged()) {]]></search>
+      <add><![CDATA[
+      // start: OCdevWizard Wishlist without login
+      //if (!$this->customer->isLogged()) {
+      $this->session->data['redirect'] = $this->url->link('account/wishlist', '', 'SSL');
+      //$this->redirect($this->url->link('account/login', '', 'SSL'));  
+      //}
+      // end: OCdevWizard Wishlist without login
+      ]]></add>
+    </operation>
+  </file>
+  <file name="catalog/controller/account/wishlist.php">
+    <operation error="skip">
+      <search position="replace" offset="6"><![CDATA[if ($this->customer->isLogged()) {]]></search>
+      <add><![CDATA[
+      // start: OCdevWizard Wishlist without login
+      //if ($this->customer->isLogged()) {     
+        $json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));       
+      //} else {
+        //$json['success'] = sprintf($this->language->get('text_login'), $this->url->link('account/login', '', 'SSL'), $this->url->link('account/register', '', 'SSL'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));        
+      //}
+      // end: OCdevWizard Wishlist without login
+      ]]></add>
+    </operation>
+  </file>
+</modification>

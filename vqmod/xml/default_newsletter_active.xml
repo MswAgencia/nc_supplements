@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+    <name>Catalog - Customer registration with newsletter by default active</name>
+    <code>mmoc-catalog-customer-register-newsletter-default</code>
+    <version>1.1</version>
+    <author>Peter Maier</author>
+    <link>http://mig-media.com</link>
+	<file path="catalog/view/theme/*/template/account/register.tpl">
+	<operation>
+		<search regex="false"><![CDATA[$entry_newsletter;]]></search>
+		<add><![CDATA[$entry_newsletter;$newsletter=1;]]></add>
+	</operation>
+	</file>
+	<file path="catalog/view/theme/*/template/checkout/register.tpl">
+	<operation>
+		<search><![CDATA[<input type="checkbox" name="newsletter" value="1" id="newsletter" />]]></search>
+		<add position="replace"><![CDATA[<input type="checkbox" name="newsletter" value="1" id="newsletter" checked />]]></add>
+	</operation>
+	</file>
+</modification>

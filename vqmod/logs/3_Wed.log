@@ -1,0 +1,449 @@
+---------- Date: 2015-08-26 16:27:31 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/index.php?route=information/contact
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/vqmod_admin_filter_products_by_category_2_0_6.xml
+   id        : Admin Filter Products By Category
+   version   : 2.0.6
+   vqmver    : 1.0.8
+   author    : Modification: dobv@seznam.cz
+VQModObject::parseMods - Could not resolve path for [admin/language/czech/catalog/product.php] (SKIPPED)
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-26 16:27:46 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/suplementos-ganho-massa-muscular
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/weight_in_category_v_2.xml
+   id        : Product Weight in Category
+   version   : OC v2.0.3.x
+   vqmver    : 
+   author    : Ernie - IP_CAM
+
+File Name    : catalog/controller/product/category.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): 'rating'     => (int)$result['rating'],
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h4>
+
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/ggw_default_grid_view20.xml
+   id        : Default grid view
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : Go Go Web - support@go-go-web.com
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): 	display('list');
+
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): class="img-responsive" /></a>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-26 16:32:04 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/admin/index.php?route=catalog/product&token=b1528fcac898bd7e1b1179415f406a73
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/vqmod_admin_filter_products_by_category_2_0_6.xml
+   id        : Admin Filter Products By Category
+   version   : 2.0.6
+   vqmver    : 1.0.8
+   author    : Modification: dobv@seznam.cz
+
+File Name    : admin/controller/catalog/product.php(5)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): 'price'      => $result['price'],
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-26 16:32:41 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/admin/index.php?route=catalog/product&token=b1528fcac898bd7e1b1179415f406a73
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/vqmod_admin_filter_products_by_category_2_0_6.xml
+   id        : Admin Filter Products By Category
+   version   : 2.0.6
+   vqmver    : 1.0.8
+   author    : Modification: dobv@seznam.cz
+VQModObject::parseMods - Could not resolve path for [admin/language/czech/catalog/product.php] (SKIPPED)
+
+File Name    : admin/controller/catalog/product.php(5)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): 'price'      => $result['price'],
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-26 16:33:02 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/admin/index.php?route=catalog/product&token=b1528fcac898bd7e1b1179415f406a73
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/vqmod_admin_filter_products_by_category_2_0_6.xml
+   id        : Admin Filter Products By Category
+   version   : 2.0.6
+   vqmver    : 1.0.8
+   author    : Modification: dobv@seznam.cz
+VQModObject::parseMods - Could not resolve path for [admin/language/czech/catalog/product.php] (SKIPPED)
+
+File Name    : admin/controller/catalog/product.php(5)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): 'price'      => $result['price'],
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-26 16:33:12 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/admin/index.php?route=catalog/product&token=b1528fcac898bd7e1b1179415f406a73
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/vqmod_admin_filter_products_by_category_2_0_6.xml
+   id        : Admin Filter Products By Category
+   version   : 2.0.6
+   vqmver    : 1.0.8
+   author    : Modification: dobv@seznam.cz
+VQModObject::parseMods - Could not resolve path for [admin/language/czech/catalog/product.php] (SKIPPED)
+
+File Name    : admin/controller/catalog/product.php(5)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): 'price'      => $result['price'],
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-26 16:33:22 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/admin/index.php?route=catalog/product&token=b1528fcac898bd7e1b1179415f406a73
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/vqmod_admin_filter_products_by_category_2_0_6.xml
+   id        : Admin Filter Products By Category
+   version   : 2.0.6
+   vqmver    : 1.0.8
+   author    : Modification: dobv@seznam.cz
+VQModObject::parseMods - Could not resolve path for [admin/language/czech/catalog/product.php] (SKIPPED)
+
+File Name    : admin/controller/catalog/product.php(5)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): 'price'      => $result['price'],
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-26 16:33:39 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/admin/index.php?route=catalog/product&token=b1528fcac898bd7e1b1179415f406a73
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/vqmod_admin_filter_products_by_category_2_0_6.xml
+   id        : Admin Filter Products By Category
+   version   : 2.0.6
+   vqmver    : 1.0.8
+   author    : Modification: dobv@seznam.cz
+VQModObject::parseMods - Could not resolve path for [admin/language/czech/catalog/product.php] (SKIPPED)
+
+File Name    : admin/controller/catalog/product.php(5)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): 'price'      => $result['price'],
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : admin/view/template/catalog/product_list.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <td class="text-left"><?php echo $product['name']; ?></td>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-26 16:34:11 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/admin/index.php?route=catalog/product&token=b1528fcac898bd7e1b1179415f406a73&sort=p.quantity&order=ASC
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/vqmod_admin_filter_products_by_category_2_0_6.xml
+   id        : Admin Filter Products By Category
+   version   : 2.0.6
+   vqmver    : 1.0.8
+   author    : Modification: dobv@seznam.cz
+VQModObject::parseMods - Could not resolve path for [admin/language/czech/catalog/product.php] (SKIPPED)
+
+File Name    : admin/controller/catalog/product.php(5)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): 'price'      => $result['price'],
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : admin/view/template/catalog/product_list.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <td class="text-left"><?php echo $product['name']; ?></td>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-26 16:34:25 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/index.php?route=product/product&product_id=58
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/free_ship.xml
+   id        : 
+   version   : 
+   vqmver    : 
+   author    : 
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <ul class="thumbnails">
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php echo $header; ?>
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(3)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php echo $stock; ?></li>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-26 16:35:21 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/suplementos-ganho-massa-muscular
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/weight_in_category_v_2.xml
+   id        : Product Weight in Category
+   version   : OC v2.0.3.x
+   vqmver    : 
+   author    : Ernie - IP_CAM
+
+File Name    : catalog/controller/product/category.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): 'rating'     => (int)$result['rating'],
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h4>
+
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/ggw_default_grid_view20.xml
+   id        : Default grid view
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : Go Go Web - support@go-go-web.com
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): 	display('list');
+
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): class="img-responsive" /></a>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-26 16:37:09 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/suplementos-ganho-massa-muscular
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/vqmod_admin_filter_products_by_category_2_0_6.xml
+   id        : Admin Filter Products By Category
+   version   : 2.0.6
+   vqmver    : 1.0.8
+   author    : Modification: dobv@seznam.cz
+VQModObject::parseMods - Could not resolve path for [admin/language/czech/catalog/product.php] (SKIPPED)
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/weight_in_category_v_2.xml
+   id        : Product Weight in Category
+   version   : OC v2.0.3.x
+   vqmver    : 
+   author    : Ernie - IP_CAM
+
+File Name    : catalog/controller/product/category.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): 'rating'     => (int)$result['rating'],
+
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/ggw_default_grid_view20.xml
+   id        : Default grid view
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : Go Go Web - support@go-go-web.com
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): 	display('list');
+
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): class="img-responsive" /></a>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-26 16:37:39 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/suplementos-ganho-massa-muscular?product_id=56
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/free_ship.xml
+   id        : 
+   version   : 
+   vqmver    : 
+   author    : 
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <ul class="thumbnails">
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php echo $header; ?>
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(3)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php echo $stock; ?></li>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-26 16:39:03 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/suplementos-ganho-massa-muscular?product_id=56
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/vqmod_admin_filter_products_by_category_2_0_6.xml
+   id        : Admin Filter Products By Category
+   version   : 2.0.6
+   vqmver    : 1.0.8
+   author    : Modification: dobv@seznam.cz
+VQModObject::parseMods - Could not resolve path for [admin/language/czech/catalog/product.php] (SKIPPED)
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/free_ship.xml
+   id        : 
+   version   : 
+   vqmver    : 
+   author    : 
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <ul class="thumbnails">
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php echo $header; ?>
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(3)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php echo $stock; ?></li>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-26 16:39:05 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/aminoacidos
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/ggw_default_grid_view20.xml
+   id        : Default grid view
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : Go Go Web - support@go-go-web.com
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): 	display('list');
+
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): class="img-responsive" /></a>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-26 16:39:39 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/suplementos-ganho-massa-muscular
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/vqmod_admin_filter_products_by_category_2_0_6.xml
+   id        : Admin Filter Products By Category
+   version   : 2.0.6
+   vqmver    : 1.0.8
+   author    : Modification: dobv@seznam.cz
+VQModObject::parseMods - Could not resolve path for [admin/language/czech/catalog/product.php] (SKIPPED)
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/ggw_default_grid_view20.xml
+   id        : Default grid view
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : Go Go Web - support@go-go-web.com
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): 	display('list');
+
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): class="img-responsive" /></a>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-26 17:04:57 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/admin/index.php?route=catalog/product&token=b1528fcac898bd7e1b1179415f406a73&sort=p.quantity&order=ASC
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/vqmod_admin_filter_products_by_category_2_0_6.xml
+   id        : Admin Filter Products By Category
+   version   : 2.0.6
+   vqmver    : 1.0.8
+   author    : Modification: dobv@seznam.cz
+VQModObject::parseMods - Could not resolve path for [admin/language/czech/catalog/product.php] (SKIPPED)
+
+File Name    : admin/controller/catalog/product.php(5)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): 'price'      => $result['price'],
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : admin/view/template/catalog/product_list.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <td class="text-left"><?php echo $product['name']; ?></td>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-26 17:08:01 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/suplementos-ganho-massa-muscular/whey-protein
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/ggw_default_grid_view20.xml
+   id        : Default grid view
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : Go Go Web - support@go-go-web.com
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): 	display('list');
+
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): class="img-responsive" /></a>
+
+----------------------------------------------------------------------
+
+

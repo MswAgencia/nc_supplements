@@ -1,0 +1,57 @@
+---------- Date: 2015-08-27 01:14:57 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : catalog/view/theme/*/template/module/featured.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): class="img-responsive" /></a>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-27 01:22:16 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/index.php?route=product/search
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : catalog/view/theme/*/template/product/search.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): class="img-responsive" /></a>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-27 01:44:22 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/suplementos-ganho-massa-muscular?product_id=55
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/free_ship.xml
+   id        : 
+   version   : 
+   vqmver    : 
+   author    : 
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <ul class="thumbnails">
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php echo $header; ?>
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(3)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php echo $stock; ?></li>
+
+----------------------------------------------------------------------
+
+

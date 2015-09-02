@@ -1,0 +1,39 @@
+---------- Date: 2015-09-01 03:28:11 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/suplementos-ganho-massa-muscular
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/ggw_default_grid_view20.xml
+   id        : Default grid view
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : Go Go Web - support@go-go-web.com
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): 	display('list');
+
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/option_to_product.xml
+   id        : Option To Product
+   version   : 4.1
+   vqmver    : 2.5.1
+   author    : Raul Marosan
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): class="img-responsive" /></a>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-09-01 13:36:42 ~ IP : ::1 ----------
+REQUEST URI : /nc_supplements/admin/index.php?route=catalog/category&token=eb7b3ab09e03a63d8a65a8c83f1815d8
+MOD DETAILS:
+   modFile   : /Applications/MAMP/htdocs/nc_supplements/vqmod/xml/vqmod_admin_filter_products_by_category_2_0_6.xml
+   id        : Admin Filter Products By Category
+   version   : 2.0.6
+   vqmver    : 1.0.8
+   author    : Modification: dobv@seznam.cz
+
+File Name    : admin/model/catalog/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $sql = "SELECT * FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "'";
+----------------------------------------------------------------------
+
+
