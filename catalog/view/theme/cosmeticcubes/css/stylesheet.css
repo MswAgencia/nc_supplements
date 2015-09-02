@@ -3160,6 +3160,9 @@ div.testimonial .description .author strong {
 .sub-menu li a {
 	color: #999;
 }
+.sub-menu li a:hover {
+	color: #FF0000;
+}
 .banner ul li {
 	list-style: none;
 	float: left;
