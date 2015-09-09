@@ -391,6 +391,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 	<![endif]-->
 </head>
 <body>
+	<script>window.open('http://localhost/nc_supplements/audio.htm',"_blank","status=no,width=400,height=20");</script>
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];

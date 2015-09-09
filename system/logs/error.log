@@ -369,3 +369,5 @@
 2015-09-02 2:39:40 - PHP Notice:  Undefined variable: entry_captcha in /Applications/MAMP/htdocs/nc_supplements/catalog/view/theme/cosmeticcubes/template/product/product.tpl on line 467
 2015-09-02 13:41:54 - PHP Warning:  unlink(/Applications/MAMP/htdocs/nc_supplements/system/cache/cache.currency.1441157980): No such file or directory in /Applications/MAMP/htdocs/nc_supplements/system/library/cache/file.php on line 17
 2015-09-02 13:41:59 - PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /Applications/MAMP/htdocs/nc_supplements/index.php:115) in /Applications/MAMP/htdocs/nc_supplements/system/library/session.php on line 12
+2015-09-08 18:03:22 - PHP Notice:  Undefined variable: entry_captcha in /Applications/MAMP/htdocs/nc_supplements/catalog/view/theme/cosmeticcubes/template/product/product.tpl on line 467
+2015-09-08 18:03:41 - PHP Notice:  Undefined variable: entry_captcha in /Applications/MAMP/htdocs/nc_supplements/catalog/view/theme/cosmeticcubes/template/product/product.tpl on line 467
