@@ -330,7 +330,10 @@ header .background-header {
 ------------------*/
 
 #top-bar {
-	position: relative;
+	position: fixed;
+	width: 100%;
+	margin-top: 13px;
+	z-index: 99;
 	background: #111;
 }
 #top-bar .background-top-bar {
@@ -347,7 +350,7 @@ header .background-header {
 #top-bar .container {
 	padding-top: 10px;
 	padding-bottom: 10px;
-	background: #ff0000;
+	background: #B20C14;
 }
 #top-bar .row > div {
 	min-height: 12px !important;
@@ -440,8 +443,9 @@ header .background-header {
 #top {
 	position: relative;
 	background: #000 url(../img/head_background.jpg.png) no-repeat;
-	background-position: center top;
+	background-position: center center;
 	background-size: 100% auto;
+	padding-top:50px;
 }
 #top .background {
 	/*background: url(../img/head_background.jpg.png) no-repeat center;*/

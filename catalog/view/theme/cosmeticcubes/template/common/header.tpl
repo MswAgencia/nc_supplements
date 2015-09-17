@@ -391,7 +391,9 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 	<![endif]-->
 </head>
 <body>
+	<?php if($_SERVER['REQUEST_URI'] == '/nc_supplements/index.php?route=common/home'){?>
 	<script>window.open('http://localhost/nc_supplements/audio.htm',"_blank","status=no,width=400,height=20");</script>
+	<?php } ?>
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
@@ -671,7 +673,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 									</div>
 									<div id="header-right" class="col-sm-9">
 										<?php
-											if($_SERVER['REQUEST_URI'] == '/loja/index.php?route=common/home' || $_SERVER['REQUEST_URI'] == '/loja/'){
+											if($_SERVER['REQUEST_URI'] == '/nc_supplements/index.php?route=common/home' || $_SERVER['REQUEST_URI'] == '/nc_supplements/'){
 												?>
 
 										<div class="col-sm-8">
@@ -691,10 +693,10 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 										<?php
 									}
 									?>
-										<div id="televendas" class="col-sm-3">
+										<!-- <div id="televendas" class="col-sm-3">
 											<img src="./catalog/view/theme/cosmeticcubes/img/televendas.png" alt="TeleVendas"/>
 											<img src="./catalog/view/theme/cosmeticcubes/img/conheca-loja-fisica.png" alt="Conheça nossa loja física"/>
-										</div>
+										</div> -->
 									</div>
 								</div>
 								<div class="row">

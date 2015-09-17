@@ -23,8 +23,8 @@
 	.container-megamenu .container {
 		padding-top: 0px !important;
 		padding-bottom: 0px !important;
-		background: #FF0000;
-		 border-radius: 10px;
+		background: #444;
+		border-radius: 10px;
 	}
 
 		.container-megamenu.container .container {
@@ -457,7 +457,7 @@
 		.megamenuToogle-wrapper {
 			position: relative;
 			z-index: 20;
-			background: #A1BA16; /* Old browsers */
+			background: #444; /* Old browsers */
 
 		}
 

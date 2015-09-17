@@ -371,3 +371,78 @@
 2015-09-02 13:41:59 - PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /Applications/MAMP/htdocs/nc_supplements/index.php:115) in /Applications/MAMP/htdocs/nc_supplements/system/library/session.php on line 12
 2015-09-08 18:03:22 - PHP Notice:  Undefined variable: entry_captcha in /Applications/MAMP/htdocs/nc_supplements/catalog/view/theme/cosmeticcubes/template/product/product.tpl on line 467
 2015-09-08 18:03:41 - PHP Notice:  Undefined variable: entry_captcha in /Applications/MAMP/htdocs/nc_supplements/catalog/view/theme/cosmeticcubes/template/product/product.tpl on line 467
+2015-09-10 4:45:41 - PHP Notice:  Undefined variable: entry_captcha in /Applications/MAMP/htdocs/nc_supplements/catalog/view/theme/cosmeticcubes/template/account/return_form.tpl on line 139
+2015-09-10 4:45:41 - PHP Notice:  Undefined variable: entry_captcha in /Applications/MAMP/htdocs/nc_supplements/catalog/view/theme/cosmeticcubes/template/account/return_form.tpl on line 141
+2015-09-10 5:03:39 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 10
+2015-09-10 5:03:39 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:03:39 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:03:39 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 10
+2015-09-10 5:03:39 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:03:39 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:03:39 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 10
+2015-09-10 5:03:39 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:03:39 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:03:39 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 10
+2015-09-10 5:03:39 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:03:39 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:03:39 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 10
+2015-09-10 5:03:39 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:03:39 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:03:39 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 10
+2015-09-10 5:03:39 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:03:39 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:08:57 - PHP Notice:  Undefined index: images in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 10
+2015-09-10 5:08:57 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:08:57 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:08:57 - PHP Notice:  Undefined index: images in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 10
+2015-09-10 5:08:57 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:08:57 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:08:57 - PHP Notice:  Undefined index: images in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 10
+2015-09-10 5:08:57 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:08:57 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:08:57 - PHP Notice:  Undefined index: images in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 10
+2015-09-10 5:08:57 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:08:57 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:08:57 - PHP Notice:  Undefined index: images in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 10
+2015-09-10 5:08:57 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:08:57 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:08:57 - PHP Notice:  Undefined index: images in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 10
+2015-09-10 5:08:57 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 5:08:57 - PHP Notice:  Undefined variable: manufacturer in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_product_manufacturer_list.tpl on line 11
+2015-09-10 13:28:57 - PHP Notice:  Undefined variable: entry_captcha in /Applications/MAMP/htdocs/nc_supplements/catalog/view/theme/cosmeticcubes/template/product/product.tpl on line 467
+2015-09-10 13:43:00 - PHP Notice:  Undefined variable: config_otp_bullet in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_common_header.tpl on line 406
+2015-09-10 13:43:00 - PHP Notice:  Undefined variable: config_otp_bullet in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-catalog_view_theme_cosmeticcubes_template_common_header.tpl on line 406
+2015-09-10 13:45:13 - PHP Notice:  Undefined variable: add in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_list.tpl on line 8
+2015-09-10 13:45:13 - PHP Notice:  Undefined variable: button_add in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_list.tpl on line 8
+2015-09-10 13:45:15 - PHP Notice:  Error: Could not load model /Applications/MAMP/htdocs/nc_supplements/admin/model/sale/fraud.php! in /Applications/MAMP/htdocs/nc_supplements/vqmod/vqcache/vq2-system_modification_system_engine_loader.php on line 24
+2015-09-10 13:46:12 - PHP Notice:  Error: Table 'nc_supplements.oc_order_fraud' doesn't exist<br />Error No: 1146<br />SELECT * FROM `oc_order_fraud` WHERE order_id = '2' in /Applications/MAMP/htdocs/nc_supplements/system/library/db/mysqli.php on line 41
+2015-09-10 13:46:12 - PHP Notice:  Trying to get property of non-object in /Applications/MAMP/htdocs/nc_supplements/admin/model/sale/fraud.php on line 6
+2015-09-10 13:46:13 - PHP Notice:  Undefined variable: frauds in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 31
+2015-09-10 13:46:13 - PHP Notice:  Undefined variable: account_custom_fields in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 91
+2015-09-10 13:46:13 - PHP Warning:  Invalid argument supplied for foreach() in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 91
+2015-09-10 13:46:13 - PHP Notice:  Undefined variable: payment_custom_fields in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 223
+2015-09-10 13:46:13 - PHP Warning:  Invalid argument supplied for foreach() in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 223
+2015-09-10 13:46:13 - PHP Notice:  Undefined variable: shipping_custom_fields in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 286
+2015-09-10 13:46:13 - PHP Warning:  Invalid argument supplied for foreach() in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 286
+2015-09-10 13:46:13 - PHP Notice:  Undefined variable: frauds in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 389
+2015-09-10 13:50:33 - PHP Notice:  Undefined variable: frauds in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 31
+2015-09-10 13:50:33 - PHP Notice:  Undefined variable: account_custom_fields in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 91
+2015-09-10 13:50:33 - PHP Warning:  Invalid argument supplied for foreach() in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 91
+2015-09-10 13:50:33 - PHP Notice:  Undefined variable: payment_custom_fields in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 223
+2015-09-10 13:50:33 - PHP Warning:  Invalid argument supplied for foreach() in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 223
+2015-09-10 13:50:33 - PHP Notice:  Undefined variable: shipping_custom_fields in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 286
+2015-09-10 13:50:33 - PHP Warning:  Invalid argument supplied for foreach() in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 286
+2015-09-10 13:50:33 - PHP Notice:  Undefined variable: frauds in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 389
+2015-09-12 20:28:19 - PHP Notice:  Undefined variable: entry_captcha in /Applications/MAMP/htdocs/nc_supplements/catalog/view/theme/cosmeticcubes/template/product/product.tpl on line 467
+2015-09-12 21:23:44 - PHP Notice:  Undefined variable: add in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_list.tpl on line 8
+2015-09-12 21:23:44 - PHP Notice:  Undefined variable: button_add in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_list.tpl on line 8
+2015-09-12 21:24:19 - PHP Notice:  Undefined variable: frauds in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 31
+2015-09-12 21:24:19 - PHP Notice:  Undefined variable: account_custom_fields in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 91
+2015-09-12 21:24:19 - PHP Warning:  Invalid argument supplied for foreach() in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 91
+2015-09-12 21:24:19 - PHP Notice:  Undefined variable: payment_custom_fields in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 223
+2015-09-12 21:24:19 - PHP Warning:  Invalid argument supplied for foreach() in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 223
+2015-09-12 21:24:19 - PHP Notice:  Undefined variable: shipping_custom_fields in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 286
+2015-09-12 21:24:19 - PHP Warning:  Invalid argument supplied for foreach() in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 286
+2015-09-12 21:24:19 - PHP Notice:  Undefined variable: frauds in /Applications/MAMP/htdocs/nc_supplements/admin/view/template/sale/order_info.tpl on line 389
+2015-09-12 21:37:23 - PHP Notice:  Undefined variable: entry_captcha in /Applications/MAMP/htdocs/nc_supplements/catalog/view/theme/cosmeticcubes/template/product/product.tpl on line 467
+2015-09-12 21:58:27 - PHP Notice:  Undefined variable: entry_captcha in /Applications/MAMP/htdocs/nc_supplements/catalog/view/theme/cosmeticcubes/template/product/product.tpl on line 467
