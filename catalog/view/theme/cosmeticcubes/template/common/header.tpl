@@ -667,37 +667,10 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 									<div id="header-left">
 										<?php if ($logo) { ?>
 										<!-- Logo -->
-										<div class="logo col-sm-3"><a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /></a></div>
+										<div class="logo col-sm-2"><a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /></a></div>
 										<?php } ?>
-
 									</div>
-									<div id="header-right" class="col-sm-9">
-										<?php
-											if($_SERVER['REQUEST_URI'] == '/nc_supplements/index.php?route=common/home' || $_SERVER['REQUEST_URI'] == '/nc_supplements/'){
-												?>
 
-										<div class="col-sm-8">
-											<div id="div_video">
-													<video id="video_ctrl" width="100%" autoplay>
-															<source src="http://localhost/nc_supplements/image/video-intro.mp4" type="video/mp4" />
-													</video>
-											</div>
-											<script async="async">
-											setTimeout(function(){
-												var parent = document.getElementById("div_video");
-												var child = document.getElementById("video_ctrl");
-												parent.removeChild(child);
-											}, 19000);
-											</script>
-										</div>
-										<?php
-									}
-									?>
-										<!-- <div id="televendas" class="col-sm-3">
-											<img src="./catalog/view/theme/cosmeticcubes/img/televendas.png" alt="TeleVendas"/>
-											<img src="./catalog/view/theme/cosmeticcubes/img/conheca-loja-fisica.png" alt="Conheça nossa loja física"/>
-										</div> -->
-									</div>
 								</div>
 								<div class="row">
 

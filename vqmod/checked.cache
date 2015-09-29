@@ -106,3 +106,14 @@ catalog/language/portuguese-br/total/total.php
 catalog/model/tool/upload.php
 catalog/view/theme/cosmeticcubes/template/common/cart.tpl
 catalog/view/theme/cosmeticcubes/template/common/home.tpl
+catalog/language/english/product/category.php
+catalog/language/portuguese-br/product/category.php
+system/library/pagination.php
+catalog/controller/module/filter.php
+catalog/language/english/module/filter.php
+catalog/language/portuguese-br/module/filter.php
+catalog/view/theme/cosmeticcubes/template/module/filter.tpl
+catalog/controller/module/category.php
+catalog/language/english/module/category.php
+catalog/language/portuguese-br/module/category.php
+catalog/view/theme/cosmeticcubes/template/module/category.tpl

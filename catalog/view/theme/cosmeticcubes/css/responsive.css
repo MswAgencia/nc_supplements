@@ -28,9 +28,21 @@
 		.responsive ul.contact-us li i {
 			margin-right: 10px;
 		}
+  #text-cart {
+		display: none;
+	}
 }
 
 @media (max-width: 960px) {
+  #text-cart {
+		display: none;
+	}
+	#top{
+		background-position: center center !important;
+	}
+	#top .logo{
+		margin-top: 4.5%;
+	}
 	.responsive .standard-body .full-width .container {
 		padding-left: 20px;
 		padding-right: 20px;
@@ -54,6 +66,9 @@
 }
 
 @media (max-width: 960px) {
+	#text-cart {
+		display: none;
+	}
 	.responsive .dropdown-menu,
 	.responsive ul.megamenu > li > .sub-menu {
 		display: none !important;
@@ -70,13 +85,20 @@
 		.responsive ul.megamenu > li.active > .sub-menu {
 			display: block !important;
 		}
+		#top .logo{
+			margin-top: 4.5%;
+		}
 }
 
 @media (max-width: 767px) {
 .logo{
 	max-width: 140px;
-	margin:0 auto;
+	margin:30% auto 0 auto !important;
 }
+#top-bar{
+	margin-top: 23px !important;
+}
+
 #top{
 	background: #000;
 }
