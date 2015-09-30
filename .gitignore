@@ -1,8 +1,8 @@
-config.php
-admin/config.php
-image/cache/
-vqmod/vqcache
-catalog/view/theme/blackdiamond
-catalog/view/theme/your_default_theme
-catalog/view/theme/cosmeticcubes2
+/config.php
+/admin/config.php
+/image/cache/
+/vqmod/vqcache
+/catalog/view/theme/blackdiamond
+/catalog/view/theme/your_default_theme
+/catalog/view/theme/cosmeticcubes2
 *.xml2
