@@ -2,7 +2,13 @@
 /admin/config.php
 /image/cache/
 /vqmod/vqcache
+/vqmod/*.cache
+/system/cache/*
+!/system/cache/index.html
+/system/logs/*
+!/system/logs/index.html
 /catalog/view/theme/blackdiamond
 /catalog/view/theme/your_default_theme
 /catalog/view/theme/cosmeticcubes2
+/nc_sass/*
 *.xml2
