@@ -12,3 +12,6 @@
 /catalog/view/theme/cosmeticcubes2
 /nc_sass/*
 *.xml2
+
+system/logs/error.log
+/system/cache
