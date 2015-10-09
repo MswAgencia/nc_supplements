@@ -171,6 +171,8 @@ $('select[name=\'country_id\']').on('change', function() {
 			$('.fa-spin').remove();
 		},
 		success: function(json) {
+      $('.fa-spin').remove();
+
 			if (json['postcode_required'] == '1') {
 				$('input[name=\'postcode\']').parent().parent().addClass('required');
 			} else {
@@ -179,7 +181,7 @@ $('select[name=\'country_id\']').on('change', function() {
 
 			html = '<option value=""><?php echo $text_select; ?></option>';
 
-			if (json['zone'] && json['zone'] != '') {
+			if (json['zone']) {
 				for (i = 0; i < json['zone'].length; i++) {
 					html += '<option value="' + json['zone'][i]['zone_id'] + '"';
 
