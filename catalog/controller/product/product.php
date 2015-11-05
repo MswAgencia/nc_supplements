@@ -304,12 +304,14 @@ class ControllerProductProduct extends Controller {
 
 			if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
 				$data['price'] = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')));
+				$data['preco_rich'] = number_format($product_info['price'],2);
 			} else {
 				$data['price'] = false;
 			}
 
 			if ((float)$product_info['special']) {
 				$data['special'] = $this->currency->format($this->tax->calculate($product_info['special'], $product_info['tax_class_id'], $this->config->get('config_tax')));
+				$data['special_rich'] = number_format($product_info['special'],2);
 			} else {
 				$data['special'] = false;
 			}
@@ -332,7 +334,6 @@ class ControllerProductProduct extends Controller {
 			}
 
 			$data['options'] = array();
-
 			foreach ($this->model_catalog_product->getProductOptions($this->request->get['product_id']) as $option) {
 				$product_option_value_data = array();
 
