@@ -150,10 +150,26 @@
             <?php if (!$special) { ?>
             <li>
               <h2><?php echo $price; ?></h2>
+              <?php
+               $precoreal = (float)$preco_rich;
+               if($precoreal > 50){?><br/>
+                  <span class="pagseguroPrice">em at&eacute; 5x de R$ <?php echo(number_format(($precoreal/5),2));?> sem juros</span>
+                  <span class="promo_5_pagseguro">+ 5% de desconto à vista (na finalização do pedido no PagSeguro)</span>
+                <?php
+              }
+              ?>
               <span style="display:none;" itemprop="price"><?= $preco_rich;?></span>
             </li>
             <?php } else { ?>
             <li><span style="text-decoration: line-through;"><?php echo $price; ?></span></li>
+            <?php
+             $precoreal = (float)$special_rich;
+             if($precoreal > 50){?><br/>
+                <span class="pagseguroPrice">em at&eacute; 5x de R$ <?php echo(number_format(($precoreal/5),2));?> sem juros</span>
+                <span class="promo_5_pagseguro">+ 5% de desconto à vista (na finalização do pedido no PagSeguro)</span>
+              <?php
+            }
+            ?>
             <span style="display:none;" itemprop="price"><?= $special_rich;?></span>
             <li>
               <h2><?php echo $special; ?></h2>
