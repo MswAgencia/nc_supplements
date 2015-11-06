@@ -29,12 +29,14 @@ class ControllerModuleBestSeller extends Controller {
 
 				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
 					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
+					$data['preco_rich'] = number_format($result['price'],2);
 				} else {
 					$price = false;
 				}
 
 				if ((float)$result['special']) {
 					$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')));
+					$data['special_rich'] = number_format($result['special'],2);
 				} else {
 					$special = false;
 				}
