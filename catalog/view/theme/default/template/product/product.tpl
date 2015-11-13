@@ -1,8 +1,9 @@
 <?php echo $header; ?>
 <div class="container">
-  <ul class="breadcrumb">
+  <ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+    <li itemprop="itemListElement" itemscope
+      itemtype="http://schema.org/ListItem"><a itemprop="item" href="<?php echo $breadcrumb['href']; ?>"><span itemprop="name"><?php echo $breadcrumb['text']; ?></span></a></li>
     <?php } ?>
   </ul>
   <div class="row"><?php echo $column_left; ?>
@@ -13,7 +14,7 @@
     <?php } else { ?>
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
+    <div id="content" class="<?php echo $class; ?>" itemscope itemtype="http://schema.org/Product"><?php echo $content_top; ?>
       <div class="row">
         <?php if ($column_left && $column_right) { ?>
         <?php $class = 'col-sm-6'; ?>
@@ -45,7 +46,7 @@
             <?php } ?>
           </ul>
           <div class="tab-content">
-            <div class="tab-pane active" id="tab-description"><?php echo $description; ?></div>
+            <div class="tab-pane active" id="tab-description" itemprop="description"><?php echo $description; ?></div>
             <?php if ($attribute_groups) { ?>
             <div class="tab-pane" id="tab-specification">
               <table class="table table-bordered">
@@ -131,7 +132,7 @@
             <button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product_id; ?>');"><i class="fa fa-heart"></i></button>
             <button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');"><i class="fa fa-exchange"></i></button>
           </div>
-          <h1><?php echo $heading_title; ?></h1>
+          <h1 itemprop="name"><?php echo $heading_title; ?></h1>
           <ul class="list-unstyled">
             <?php if ($manufacturer) { ?>
             <li><?php echo $text_manufacturer; ?> <a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a></li>
@@ -142,14 +143,36 @@
             <?php } ?>
             <li><?php echo $text_stock; ?> <?php echo $stock; ?></li>
           </ul>
-          <?php if ($price) { ?>
+          <?php
+          $num_parcelas = 5;
+          if ($price) { ?>
           <ul class="list-unstyled">
+            <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <meta itemprop="priceCurrency" content="BRL" />
             <?php if (!$special) { ?>
             <li>
               <h2><?php echo $price; ?></h2>
+              <?php
+               $precoreal = (float)$preco_rich;
+               if($precoreal > 50){?><br/>
+                  <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x de R$ <?php echo(number_format(($precoreal/$num_parcelas),2));?> sem juros</span>
+                  <span class="promo_5_pagseguro">+ 5% de desconto à vista (na finalização do pedido no PagSeguro)</span>
+                <?php
+              }
+              ?>
+              <span style="display:none;" itemprop="price"><?= $preco_rich;?></span>
             </li>
             <?php } else { ?>
             <li><span style="text-decoration: line-through;"><?php echo $price; ?></span></li>
+            <?php
+             $precoreal = (float)$special_rich;
+             if($precoreal > 50){?><br/>
+                <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x de R$ <?php echo(number_format(($precoreal/$num_parcelas),2));?> sem juros</span>
+                <span class="promo_5_pagseguro">+ 5% de desconto à vista (na finalização do pedido no PagSeguro)</span>
+              <?php
+            }
+            ?>
+            <span style="display:none;" itemprop="price"><?= $special_rich;?></span>
             <li>
               <h2><?php echo $special; ?></h2>
             </li>
@@ -333,8 +356,8 @@
             <hr>
             <!-- AddThis Button BEGIN -->
             <div class="addthis_toolbox addthis_default_style"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
-            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script> 
-            <!-- AddThis Button END --> 
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script>
+            <!-- AddThis Button END -->
           </div>
           <?php } ?>
         </div>
@@ -351,7 +374,7 @@
         <?php } else { ?>
         <?php $class = 'col-lg-3 col-md-3 col-sm-6 col-xs-12'; ?>
         <?php } ?>
-        <div class="<?php echo $class; ?>">
+        <div class="<?php echo $class; ?>" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
           <div class="product-thumb transition">
             <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
             <div class="caption">
@@ -425,14 +448,14 @@ $('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
 		},
 		success: function(json) {
 			$('.alert, .text-danger').remove();
-			
+
 			if (json['success']) {
 				$('#recurring-description').html(json['success']);
 			}
 		}
 	});
 });
-//--></script> 
+//--></script>
 <script type="text/javascript"><!--
 $('#button-cart').on('click', function() {
 	$.ajax({
@@ -454,7 +477,7 @@ $('#button-cart').on('click', function() {
 				if (json['error']['option']) {
 					for (i in json['error']['option']) {
 						var element = $('#input-option' + i.replace('_', '-'));
-						
+
 						if (element.parent().hasClass('input-group')) {
 							element.parent().after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
 						} else {
@@ -462,28 +485,28 @@ $('#button-cart').on('click', function() {
 						}
 					}
 				}
-				
+
 				if (json['error']['recurring']) {
 					$('select[name=\'recurring_id\']').after('<div class="text-danger">' + json['error']['recurring'] + '</div>');
 				}
-				
+
 				// Highlight any found errors
 				$('.text-danger').parent().addClass('has-error');
 			}
-			
+
 			if (json['success']) {
 				$('.breadcrumb').after('<div class="alert alert-success">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-				
+
 				$('#cart-total').html(json['total']);
-				
+
 				$('html, body').animate({ scrollTop: 0 }, 'slow');
-				
+
 				$('#cart > ul').load('index.php?route=common/cart/info ul li');
 			}
 		}
 	});
 });
-//--></script> 
+//--></script>
 <script type="text/javascript"><!--
 $('.date').datetimepicker({
 	pickTime: false
@@ -500,13 +523,13 @@ $('.time').datetimepicker({
 
 $('button[id^=\'button-upload\']').on('click', function() {
 	var node = this;
-	
+
 	$('#form-upload').remove();
-	
+
 	$('body').prepend('<form enctype="multipart/form-data" id="form-upload" style="display: none;"><input type="file" name="file" /></form>');
-	
+
 	$('#form-upload input[name=\'file\']').trigger('click');
-	
+
 	$('#form-upload input[name=\'file\']').on('change', function() {
 		$.ajax({
 			url: 'index.php?route=tool/upload',
@@ -524,14 +547,14 @@ $('button[id^=\'button-upload\']').on('click', function() {
 			},
 			success: function(json) {
 				$('.text-danger').remove();
-				
+
 				if (json['error']) {
 					$(node).parent().find('input').after('<div class="text-danger">' + json['error'] + '</div>');
 				}
-				
+
 				if (json['success']) {
 					alert(json['success']);
-					
+
 					$(node).parent().find('input').attr('value', json['code']);
 				}
 			},
@@ -541,7 +564,7 @@ $('button[id^=\'button-upload\']').on('click', function() {
 		});
 	});
 });
-//--></script> 
+//--></script>
 <script type="text/javascript"><!--
 $('#review').delegate('.pagination a', 'click', function(e) {
   e.preventDefault();
@@ -571,14 +594,14 @@ $('#button-review').on('click', function() {
 		},
 		success: function(json) {
 			$('.alert-success, .alert-danger').remove();
-			
+
 			if (json['error']) {
 				$('#review').after('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '</div>');
 			}
-			
+
 			if (json['success']) {
 				$('#review').after('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + '</div>');
-				
+
 				$('input[name=\'name\']').val('');
 				$('textarea[name=\'text\']').val('');
 				$('input[name=\'rating\']:checked').prop('checked', false);
@@ -597,5 +620,5 @@ $(document).ready(function() {
 		}
 	});
 });
-//--></script> 
+//--></script>
 <?php echo $footer; ?>
