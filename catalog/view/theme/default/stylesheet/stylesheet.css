@@ -72,8 +72,7 @@ div.required .control-label:before {
 .dropdown-menu li > a:hover {
 	text-decoration: none;
 	color: #ffffff;
-	background-color: #229ac8;
-	background-image: linear-gradient(to bottom, #23a1d1, #1f90bb);
+	background-color: #B20C14;
 	background-repeat: repeat-x;
 }
 /* top */
@@ -120,6 +119,12 @@ div.required .control-label:before {
 #top-links a + a {
 	margin-left: 15px;
 }
+.img-banner-sm3{
+	max-width: 280px;
+	padding:0px;
+	margin:0px;
+}
+
 /* logo */
 #logo {
 	margin: 0 0 10px 0;
@@ -228,8 +233,7 @@ div.required .control-label:before {
 #menu .see-all:hover, #menu .see-all:focus {
 	text-decoration: none;
 	color: #ffffff;
-	background-color: #229ac8;
-	background-image: linear-gradient(to bottom, #23a1d1, #1f90bb);
+	background-color: #B20C14;
 	background-repeat: repeat-x;
 }
 #menu #category {
