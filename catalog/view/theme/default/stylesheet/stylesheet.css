@@ -55,6 +55,12 @@ select.form-control, textarea.form-control, input[type="text"].form-control, inp
 	font-size: 12px;
 	height: 30px;
 }
+
+#tab-specification  table thead{
+	background-color: #B20C14;
+	color:#FFF;
+}
+
 /* Fix some bootstrap issues */
 span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
 	display: inline;
