@@ -593,17 +593,27 @@ footer h5 {
 h2.price {
 	margin: 0;
 }
-.product-thumb .price {
-	color: #444;
+a.thumbnail:hover{
+	border-color: #B20C14;
 }
-.product-thumb .price-new {
+.red{background-color: #B20C14; color:#FFF;}
+.product-thumb .price-new,.price {
 	font-weight: 600;
+	font-size: 1.3em;
+	color:#B20C14 !important;
 }
 .product-thumb .price-old {
-	color: #999;
-	text-decoration: line-through;
+	color: #999 !important;
+	text-decoration: line-through !important;
 	margin-left: 10px;
+	font-size: 1.1em;
 }
+.pagseguroPrice,.promo_5_pagseguro{
+	font-weight: normal;
+	font-size: 0.8em;
+	color:#B20C14 !important;
+}
+
 .product-thumb .price-tax {
 	color: #999;
 	font-size: 12px;

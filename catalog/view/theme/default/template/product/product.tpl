@@ -163,19 +163,21 @@
               <span style="display:none;" itemprop="price"><?= $preco_rich;?></span>
             </li>
             <?php } else { ?>
-            <li><span style="text-decoration: line-through;"><?php echo $price; ?></span></li>
-            <?php
-             $precoreal = (float)$special_rich;
-             if($precoreal > 50){?><br/>
-                <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x de R$ <?php echo(number_format(($precoreal/$num_parcelas),2));?> sem juros</span>
-                <span class="promo_5_pagseguro">+ 5% de desconto à vista (na finalização do pedido no PagSeguro)</span>
-              <?php
-            }
-            ?>
-            <span style="display:none;" itemprop="price"><?= $special_rich;?></span>
             <li>
-              <h2><?php echo $special; ?></h2>
-            </li>
+              <span class="price-old" style="text-decoration:line-through;font-size:1.4em;"><?php echo $price; ?></span></li>
+              <span style="display:none;" itemprop="price"><?= $special_rich;?></span>
+              <li>
+                <span class="price-new" style="font-size:1.6em;font-weight:bold;color:#B20C14"><?php echo $special; ?></span>
+              </li>
+              <?php
+               $precoreal = (float)$special_rich;
+               if($precoreal > 50){?><br/>
+                  <span class="pagseguroPrice" style="font-size:1.2em;">em at&eacute; <?=$num_parcelas?>x de R$ <?php echo(number_format(($precoreal/$num_parcelas),2));?> sem juros</span>
+                  <span class="promo_5_pagseguro" style="font-size:1.2em;">+ 5% de desconto à vista (na finalização do pedido no PagSeguro)</span>
+                <?php
+                }
+                ?>
+
             <?php } ?>
             <?php if ($tax) { ?>
             <li><?php echo $text_tax; ?> <?php echo $tax; ?></li>
