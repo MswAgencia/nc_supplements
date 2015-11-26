@@ -150,7 +150,7 @@
             <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
             <meta itemprop="priceCurrency" content="BRL" />
             <?php if (!$special) { ?>
-            <li>
+            <li class="price">
               <h2><?php echo $price; ?></h2>
               <?php
                $precoreal = (float)$preco_rich;

@@ -597,7 +597,7 @@ a.thumbnail:hover{
 	border-color: #B20C14;
 }
 .red{background-color: #B20C14; color:#FFF;}
-.product-thumb .price-new,.price {
+.product-thumb .price-new,.price,p.price {
 	font-weight: 600;
 	font-size: 1.3em;
 	color:#B20C14 !important;
