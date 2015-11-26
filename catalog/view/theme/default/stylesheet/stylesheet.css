@@ -60,6 +60,7 @@ select.form-control, textarea.form-control, input[type="text"].form-control, inp
 	background-color: #B20C14;
 	color:#FFF;
 }
+.checkbox{margin-left: 20px;}
 
 /* Fix some bootstrap issues */
 span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
