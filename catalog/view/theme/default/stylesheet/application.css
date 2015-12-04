@@ -5,6 +5,18 @@ body {
 a {
     color: #333333
 }
+header {
+  background-image: url(../image/head_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 350px;
+}
+#logo {
+  margin: 10px auto 0 auto;
+  width: 200px;
+  height: 200px;
+}
 
 #cart>.btn {
     color: #333
@@ -81,6 +93,7 @@ a {
     background-color: #B20C14;
     border-bottom: none;
     padding-top: 15px;
+    margin: 0;
 }
 
 #top-links li {
@@ -133,7 +146,8 @@ ul.nav>li.dropdown>a:after {
 #menu {
     background-color: #494949;
     background-image: none;
-    border: none
+    border: none;
+    margin-top: 10px;
 }
 
 #menu .btn-navbar {
