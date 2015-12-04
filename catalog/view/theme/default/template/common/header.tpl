@@ -82,25 +82,25 @@
                   <header>
                     <div class="container">
                       <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-sm-12">
                           <div id="logo">
                             <?php if ($logo) { ?>
                               <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
-                              <?php } else { ?>
-                                <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
-                                <?php } ?>
-                              </div>
-                            </div>
-                            <div class="col-sm-8"><!-- CONTEUDO AO LADO DO LOGO --></div>
+                            <?php } else { ?>
+                              <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
+                            <?php } ?>
                           </div>
                         </div>
-                      </header>
-                      <?php if ($categories) { ?>
-                        <div class="container">
-                          <nav id="menu" class="navbar">
-                            <div class="navbar-header"><span id="category" class="visible-xs"><?php echo $text_category; ?></span>
-                              <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
-                            </div>
+                      </div>
+                    </div>
+                  </header>
+
+                  <?php if ($categories) { ?>
+                    <div class="container">
+                      <nav id="menu" class="navbar">
+                        <div class="navbar-header"><span id="category" class="visible-xs"><?php echo $text_category; ?></span>
+                          <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
                             <div class="collapse navbar-collapse navbar-ex1-collapse">
                               <ul class="nav navbar-nav">
                                 <?php foreach ($categories as $category) { ?>
