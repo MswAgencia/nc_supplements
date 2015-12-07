@@ -5,17 +5,18 @@ body {
 a {
     color: #333333
 }
+
 header {
   background-image: url(../image/head_background.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
-  min-height: 350px;
+  background-color: #333;
 }
+
 #logo {
-  margin: 10px auto 0 auto;
+  margin: 10px auto;
   width: 200px;
-  height: 200px;
 }
 
 #cart>.btn {
@@ -156,7 +157,9 @@ ul.nav>li.dropdown>a:after {
     border-color: #2f2f2f
 }
 
-#menu .btn-navbar:hover {
+#menu .btn-navbar:hover,
+#menu .btn-navbar:focus,
+#menu .btn-navbar:active {
   background-color: #515151;
 }
 
@@ -209,8 +212,23 @@ footer p a {
     color: #B20C14
 }
 
+
+@media screen and (min-width: 768px) {
+    header {
+      min-height: 230px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    background: none;
+  }
+}
 @media screen and (min-width: 1200px) {
     .container {
         width: 90%
+    }
+    header {
+      min-height: 380px;
     }
 }
