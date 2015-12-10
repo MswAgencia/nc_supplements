@@ -39,7 +39,11 @@
           <ul class="nav nav-tabs">
             <li class="active"><a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
             <?php if ($attribute_groups) { ?>
-            <li><a href="#tab-specification" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
+              <?php foreach($attribute_groups as $attribute_group) { ?>
+                <?php foreach($attribute_group['attribute'] as $attribute) { ?>
+                  <li><a href="<?= "#tab-attr-{$attribute['attribute_id']}" ?>" data-toggle="tab"><?= $attribute['name'] ?></a></li>
+                <?php } ?>
+              <?php } ?>
             <?php } ?>
             <?php if ($review_status) { ?>
             <li><a href="#tab-review" data-toggle="tab"><?php echo $tab_review; ?></a></li>
@@ -48,25 +52,16 @@
           <div class="tab-content">
             <div class="tab-pane active" id="tab-description" itemprop="description"><?php echo $description; ?></div>
             <?php if ($attribute_groups) { ?>
-            <div class="tab-pane" id="tab-specification">
-              <table class="table table-bordered">
-                <?php foreach ($attribute_groups as $attribute_group) { ?>
-                <thead>
-                  <tr>
-                    <td colspan="2"><strong><?php echo $attribute_group['name']; ?></strong></td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
-                  <tr>
-                    <td><?php echo $attribute['name']; ?></td>
-                    <td><?php echo $attribute['text']; ?></td>
-                  </tr>
-                  <?php } ?>
-                </tbody>
+              <?php foreach($attribute_groups as $attribute_group) { ?>
+                <?php foreach($attribute_group['attribute'] as $attribute) { ?>
+                  <div class="tab-pane" id="<?= "tab-attr-{$attribute['attribute_id']}" ?>">
+                    <h3><?= $attribute['name']; ?></h3>
+                    <p>
+                      <?= $attribute['text']; ?>
+                    </p>
+                  </div>
                 <?php } ?>
-              </table>
-            </div>
+              <?php } ?>
             <?php } ?>
             <?php if ($review_status) { ?>
             <div class="tab-pane" id="tab-review">
