@@ -1,4 +1,4 @@
-<h3><?php echo $heading_title; ?></h3>
+<h3><?php echo $heading_title;setlocale(LC_MONETARY, 'pt_BR');  ?></h3>
 <div class="row product-layout">
   <?php foreach ($products as $product) { ?>
   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -25,19 +25,26 @@
           <?php if (!$product['special']) { ?>
           <?php echo $product['price']; ?>
           <?php
-           $precoreal = (float)$preco_rich;
+           $precoreal = $product['price'];
+           $source = array('.', ',','R$');
+           $replace = array('', '.','');
+           $precoreal = str_replace($source, $replace, $precoreal);
            if($precoreal > 50){?><br/>
-              <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x de R$ <?php echo(number_format(($precoreal/$num_parcelas),2));?> sem juros</span>
-              <span class="promo_5_pagseguro">+ 5% de desconto à vista (na finalização do pedido no PagSeguro)</span>
+              <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x s/ juros de <?php echo(money_format('%n',$precoreal/$num_parcelas));?></span>
+              <span class="promo_5_pagseguro">+ 5% de desconto à vista (PagSeguro)</span>
             <?php
-          }?>
+          }
+          ?>
           <?php } else { ?>
           <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
           <?php
-           $precoreal = (float)$special_rich;
+           $precoreal = $product['special'];
+           $source = array('.', ',','R$');
+           $replace = array('', '.','');
+           $precoreal = str_replace($source, $replace, $precoreal);
            if($precoreal > 50){?><br/>
-              <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x de R$ <?php echo(number_format(($precoreal/$num_parcelas),2));?> sem juros</span>
-              <span class="promo_5_pagseguro">+ 5% de desconto à vista (na finalização do pedido no PagSeguro)</span>
+              <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x s/ juros de <?php echo(money_format('%n',$precoreal/$num_parcelas));?></span>
+              <span class="promo_5_pagseguro">+ 5% de desconto à vista (PagSeguro)</span>
             <?php
           }
           ?>

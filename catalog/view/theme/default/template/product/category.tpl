@@ -1,4 +1,4 @@
-<?php echo $header; ?>
+<?php echo $header; setlocale(LC_MONETARY, 'pt_BR'); ?>
 <div class="container">
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -121,8 +121,8 @@
                   <?php
                    $precoreal = (float)$preco_rich;
                    if($precoreal > 50){?><br/>
-                      <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x de R$ <?php echo(number_format(($precoreal/$num_parcelas),2));?> sem juros</span>
-                      <span class="promo_5_pagseguro">+ 5% de desconto à vista (na finalização do pedido no PagSeguro)</span>
+                     <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x s/ juros de <?php echo(money_format('%n',$precoreal/$num_parcelas));?></span>
+                     <span class="promo_5_pagseguro">+ 5% de desconto à vista (PagSeguro)</span>
                     <?php
                   }
                   ?>
@@ -131,8 +131,8 @@
                   <?php
                    $precoreal = (float)$special_rich;
                    if($precoreal > 50){?><br/>
-                      <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x de R$ <?php echo(number_format(($precoreal/$num_parcelas),2));?> sem juros</span>
-                      <span class="promo_5_pagseguro">+ 5% de desconto à vista (na finalização do pedido no PagSeguro)</span>
+                     <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x s/ juros de <?php echo(money_format('%n',$precoreal/$num_parcelas));?></span>
+                     <span class="promo_5_pagseguro">+ 5% de desconto à vista (PagSeguro)</span>
                     <?php
                   }
                   ?>

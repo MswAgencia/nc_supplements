@@ -1,4 +1,4 @@
-<?php echo $header; ?>
+<?php echo $header;setlocale(LC_MONETARY, 'pt_BR'); ?>
 <div class="container">
   <ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -150,8 +150,8 @@
               <?php
                $precoreal = (float)$preco_rich;
                if($precoreal > 50){?><br/>
-                  <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x de R$ <?php echo(number_format(($precoreal/$num_parcelas),2));?> sem juros</span>
-                  <span class="promo_5_pagseguro">+ 5% de desconto à vista (na finalização do pedido no PagSeguro)</span>
+                 <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x sem juros de <?php echo(money_format('%n',$precoreal/$num_parcelas));?></span>
+                 <span class="promo_5_pagseguro">+ 5% de desconto à vista (PagSeguro)</span>
                 <?php
               }
               ?>
@@ -162,8 +162,8 @@
             <?php
              $precoreal = (float)$special_rich;
              if($precoreal > 50){?><br/>
-                <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x de R$ <?php echo(number_format(($precoreal/$num_parcelas),2));?> sem juros</span>
-                <span class="promo_5_pagseguro">+ 5% de desconto à vista (na finalização do pedido no PagSeguro)</span>
+                <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x sem juros de <?php echo(money_format('%n',$precoreal/$num_parcelas));?></span>
+                <span class="promo_5_pagseguro">+ 5% de desconto à vista (PagSeguro)</span>
               <?php
             }
             ?>
@@ -390,8 +390,30 @@
               <p class="price">
                 <?php if (!$product['special']) { ?>
                 <?php echo $product['price']; ?>
+                <?php
+                 $precoreal = $product['price'];
+                 $source = array('.', ',','R$');
+                 $replace = array('', '.','');
+                 $precoreal = str_replace($source, $replace, $precoreal);
+                 if($precoreal > 50){?><br/>
+                    <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x s/ juros de <?php echo(money_format('%n',$precoreal/$num_parcelas));?></span>
+                    <span class="promo_5_pagseguro">+ 5% de desconto à vista (PagSeguro)</span>
+                  <?php
+                }
+                ?>
                 <?php } else { ?>
                 <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
+                <?php
+                 $precoreal = $product['special'];
+                 $source = array('.', ',','R$');
+                 $replace = array('', '.','');
+                 $precoreal = str_replace($source, $replace, $precoreal);
+                 if($precoreal > 50){?><br/>
+                    <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x s/ juros de <?php echo(money_format('%n',$precoreal/$num_parcelas));?></span>
+                    <span class="promo_5_pagseguro">+ 5% de desconto à vista (PagSeguro)</span>
+                  <?php
+                }
+                ?>
                 <?php } ?>
                 <?php if ($product['tax']) { ?>
                 <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
