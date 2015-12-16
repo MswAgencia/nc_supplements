@@ -51,6 +51,24 @@ header {
     background-color: #FF0000
 }
 
+.product-thumb .caption .price {
+  color: #B20C14;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.product-thumb .caption .price span {
+  color: #666;
+  font-size: 12px;
+}
+
+.thumbnails .image-additional a.thumbnail.active,
+.thumbnails .image-additional a.thumbnail:hover,
+.thumbnails .image-additional a.thumbnail:focus,
+.thumbnails .image-additional a.thumbnail:active {
+  border-color: #B20C14;
+}
+
 .list-group .list-group-item.active {
     background: #B20C14;
     color: #FFF
@@ -84,10 +102,40 @@ header {
     border-color: #82090f #82090f #66070b
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
     background-color: #ca0e17;
     background-image: linear-gradient(to bottom, #ca0e17, #ca0e17);
-    border-color: #9a0a11 #9a0a11 #82090f
+    border-color: #9a0a11 #9a0a11 #82090f;
+    background-position: 0;
+}
+
+.btn-primary[disabled],
+.btn-primary.disabled
+{
+  background-color: #901e24;
+}
+
+.btn-primary[disabled]:hover,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:focus,
+.btn-primary.disabled:focus
+{
+  background-color: #6a070c;
+  border-color: #ca0e17;
+}
+
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+  position: static;
+  margin-left: 0;
+}
+
+.form-control:focus {
+  border-color: #9a0a11;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0, .075), 0 0 8px rgba(106, 7, 12, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0, .075), 0 0 8px rgba(106, 7, 12, 0.6);
+
 }
 
 #top {
@@ -117,18 +165,18 @@ header {
 #top-links .open>a,
 #top-links .open>a:hover {
     background-color: transparent;
-    border-bottom: solid 1px #FFF
+    border-bottom: solid 1px #FFF;
 }
 
 #top-links .open .dropdown-menu {
     padding: 0;
-    background: #494949
+    background: #494949;
 }
 
 #top-links .open .dropdown-menu li:hover a {
-    background-color: #533284;
-    background-image: linear-gradient(to bottom, #533284, #472b72);
-    border-bottom: none
+    background-color: #B20C14;
+    background-image: linear-gradient(to bottom, #B20C14, #9a0a11);
+    border-bottom: none;
 }
 
 ul.nav>li.dropdown>a:after {
@@ -141,7 +189,7 @@ ul.nav>li.dropdown>a:after {
     -moz-osx-font-smoothing: grayscale;
     margin: 5px 0px 0px 10px;
     vertical-align: top;
-    display: inline-block
+    display: inline-block;
 }
 
 #menu {
@@ -154,7 +202,7 @@ ul.nav>li.dropdown>a:after {
 #menu .btn-navbar {
     background-color: #494949;
     background-image: none;
-    border-color: #2f2f2f
+    border-color: #2f2f2f;
 }
 
 #menu .btn-navbar:hover,
