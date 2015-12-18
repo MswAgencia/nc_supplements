@@ -62,6 +62,10 @@ header {
   font-size: 12px;
 }
 
+.thumbnails a.thumbnail.active,
+.thumbnails a.thumbnail:hover,
+.thumbnails a.thumbnail:focus,
+.thumbnails a.thumbnail:active,
 .thumbnails .image-additional a.thumbnail.active,
 .thumbnails .image-additional a.thumbnail:hover,
 .thumbnails .image-additional a.thumbnail:focus,
