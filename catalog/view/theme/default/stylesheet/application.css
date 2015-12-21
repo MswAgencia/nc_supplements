@@ -83,7 +83,8 @@ header {
   font-size: 18px;
 }
 
-.product-thumb .caption .price span {
+.product-thumb .caption .price .pagseguroPrice,
+.product-thumb .caption .price .promo_5_pagseguro {
   color: #666;
   font-size: 12px;
 }
