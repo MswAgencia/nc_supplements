@@ -4,13 +4,13 @@
   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
     <div class="product-thumb transition">
       <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
-      <?php if($preco_rich >= 50 and !empty($product['special'])) { ?>
+      <?php if($product['_price'] >= 100 and empty($product['special'])) { ?>
         <div class="promo-badge frete-gratis">Frete Grátis</div>
-      <?php } elseif($preco_rich >= 50) { ?>
+      <?php } elseif($product['_price'] >= 100 and !empty($product['special'])) { ?>
         <div class="two promo-badge frete-gratis">Frete Grátis</div>
-        <div class="two promo-badge desconto"><?= getDiscountPercentage(200, 25) ?>% de Desconto</div>
+        <div class="two promo-badge desconto"><?= getDiscountPercentage($product['_price'], $product['_special']) ?>% de Desconto</div>
       <?php } elseif(!empty($product['special'])) { ?>
-        <div class="promo-badge desconto"><?= getDiscountPercentage(100, 80) ?>% de Desconto</div>
+        <div class="promo-badge desconto"><?= getDiscountPercentage($product['_price'], $product['_special']) ?>% de Desconto</div>
       <?php } ?>
       <div class="caption">
         <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h4>
