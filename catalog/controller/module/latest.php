@@ -66,6 +66,8 @@ class ControllerModuleLatest extends Controller {
 					'name'        => $result['name'],
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..',
 					'price'       => $price,
+          '_price'      => $result['price'],
+          '_special'    => $result['special'],
 					'special'     => $special,
 					'tax'         => $tax,
 					'rating'      => $rating,

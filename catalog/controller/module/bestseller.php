@@ -60,6 +60,8 @@ class ControllerModuleBestSeller extends Controller {
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..',
 					'price'       => $price,
 					'special'     => $special,
+          '_price'      => $result['price'],
+          '_special'    => $result['special'],
 					'tax'         => $tax,
 					'rating'      => $rating,
 					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id']),

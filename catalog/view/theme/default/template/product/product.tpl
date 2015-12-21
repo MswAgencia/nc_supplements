@@ -68,6 +68,7 @@
             <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
             <meta itemprop="priceCurrency" content="BRL" />
             <?php if (!$special) { ?>
+            <?= getBadgeHtmlForProductPage($_price, $_special, getMinimumPriceForFreeShipping()) ?>
             <li>
               <h2><?php echo $price; ?></h2>
               <?php
@@ -81,6 +82,8 @@
               <span style="display:none;" itemprop="price"><?= $preco_rich;?></span>
             </li>
             <?php } else { ?>
+            <?= getBadgeHtmlForProductPage($_price, $_special, getMinimumPriceForFreeShipping()) ?>
+
             <li><span style="text-decoration: line-through;"><?php echo $price; ?></span></li>
             <?php
              $precoreal = (float)$special_rich;
