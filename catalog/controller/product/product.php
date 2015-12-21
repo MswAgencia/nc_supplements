@@ -305,6 +305,7 @@ class ControllerProductProduct extends Controller {
 			if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
 				$data['price'] = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')));
 				$data['preco_rich'] = number_format($product_info['price'],2);
+        $data['_price'] = $product_info['price'];
 			} else {
 				$data['price'] = false;
 			}
@@ -312,6 +313,7 @@ class ControllerProductProduct extends Controller {
 			if ((float)$product_info['special']) {
 				$data['special'] = $this->currency->format($this->tax->calculate($product_info['special'], $product_info['tax_class_id'], $this->config->get('config_tax')));
 				$data['special_rich'] = number_format($product_info['special'],2);
+        $data['_special'] = $product_info['special'];
 			} else {
 				$data['special'] = false;
 			}
@@ -433,6 +435,8 @@ class ControllerProductProduct extends Controller {
 					'name'        => $result['name'],
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..',
 					'price'       => $price,
+          '_price'      => $result['price'],
+          '_special'    => $result['special'],
 					'special'     => $special,
 					'tax'         => $tax,
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
