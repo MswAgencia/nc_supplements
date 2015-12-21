@@ -2,5 +2,6 @@
 
 function getDiscountPercentage($price, $special)
 {
-  return (($price - $special) * 100) / $price;
+  $percentual = (($price - $special) * 100) / $price;
+  return number_format($percentual, 2, '.', '');
 }
