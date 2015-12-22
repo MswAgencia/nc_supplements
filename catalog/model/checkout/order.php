@@ -846,7 +846,7 @@ class ModelCheckoutOrder extends Model {
         $updateData = array(
           'comment' => nl2br($message),
           'store_url' => $this->config->get('config_url'),
-          'logo' => $this->config->get('config_logo'),
+          'logo' => $this->config->get('config_url') . 'image/' . $this->config->get('config_logo'),
           'store_name' => $this->config->get('config_name'),
         );
 
