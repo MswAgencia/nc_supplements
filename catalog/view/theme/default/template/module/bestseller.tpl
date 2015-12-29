@@ -29,22 +29,14 @@
           <?php if (!$product['special']) { ?>
           <?php echo $product['price']; ?>
           <?php
-           $precoreal = (float)$preco_rich;
-           if($precoreal > 50){?><br/>
-              <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x de R$ <?php echo(number_format(($precoreal/$num_parcelas),2));?> sem juros</span>
-              <span class="promo_5_pagseguro">+ 5% de desconto à vista (na finalização do pedido no PagSeguro)</span>
-          <?php
-          }
+            // system/helpers/calc.php
+            echo getDiscountMessageBasedOnPriceValue($product['_price'], 5, 5, 50);
           ?>
           <?php } else { ?>
           <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
           <?php
-           $precoreal = (float)$special_rich;
-           if($precoreal > 50){?><br/>
-              <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x de R$ <?php echo(number_format(($precoreal/$num_parcelas),2));?> sem juros</span>
-              <span class="promo_5_pagseguro">+ 5% de desconto à vista (na finalização do pedido no PagSeguro)</span>
-          <?php
-          }
+            // system/helpers/calc.php
+            echo getDiscountMessageBasedOnPriceValue($product['_special'], 5, 5, 50);
           ?>
           <?php } ?>
           <?php if ($product['tax']) { ?>
