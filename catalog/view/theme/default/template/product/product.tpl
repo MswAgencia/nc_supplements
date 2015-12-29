@@ -72,12 +72,8 @@
             <li>
               <h2><?php echo $price; ?></h2>
               <?php
-               $precoreal = (float)$preco_rich;
-               if($precoreal > 50){?><br/>
-                 <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x sem juros de <?php echo(money_format('%n',$precoreal/$num_parcelas));?></span>
-                 <span class="promo_5_pagseguro">+ 5% de desconto à vista (PagSeguro)</span>
-                <?php
-              }
+                // system/helpers/calc.php
+                echo getDiscountMessageBasedOnPriceValue($_price, 5, 5, 50);
               ?>
               <span style="display:none;" itemprop="price"><?= $preco_rich;?></span>
             </li>
@@ -86,12 +82,8 @@
 
             <li><span style="text-decoration: line-through;"><?php echo $price; ?></span></li>
             <?php
-             $precoreal = (float)$special_rich;
-             if($precoreal > 50){?><br/>
-                <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x sem juros de <?php echo(money_format('%n',$precoreal/$num_parcelas));?></span>
-                <span class="promo_5_pagseguro">+ 5% de desconto à vista (PagSeguro)</span>
-              <?php
-            }
+              // system/helpers/calc.php
+              echo getDiscountMessageBasedOnPriceValue($_special, 5, 5, 50);
             ?>
             <span style="display:none;" itemprop="price"><?= $special_rich;?></span>
             <li>
