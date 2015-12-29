@@ -23,7 +23,6 @@
         <?php } ?>
 
         <?php
-        $num_parcelas = 5;
         if ($product['price']) { ?>
         <p class="price">
           <?php if (!$product['special']) { ?>
