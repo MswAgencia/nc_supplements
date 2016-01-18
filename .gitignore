@@ -12,9 +12,5 @@
 /catalog/view/theme/cosmeticcubes2
 /nc_sass/*
 *.xml2
-<<<<<<< HEAD
-
 system/logs/error.log
 *.log
-=======
->>>>>>> parent of 7e67262... Alteração .gitignore
