@@ -28,28 +28,14 @@
           <?php if (!$product['special']) { ?>
           <?php echo $product['price']; ?>
           <?php
-           $precoreal = $product['price'];
-           $source = array('.', ',','R$');
-           $replace = array('', '.','');
-           $precoreal = str_replace($source, $replace, $precoreal);
-           if($precoreal > 50){?><br/>
-              <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x s/ juros de <?php echo(money_format('%n',$precoreal/$num_parcelas));?></span>
-              <span class="promo_5_pagseguro">+ 5% de desconto à vista (PagSeguro)</span>
-            <?php
-          }
+            // system/helpers/calc.php
+            echo getDiscountMessageBasedOnPriceValue($product['_price'], 5, 5, 50);
           ?>
           <?php } else { ?>
           <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
           <?php
-           $precoreal = $product['special'];
-           $source = array('.', ',','R$');
-           $replace = array('', '.','');
-           $precoreal = str_replace($source, $replace, $precoreal);
-           if($precoreal > 50){?><br/>
-              <span class="pagseguroPrice">em at&eacute; <?=$num_parcelas?>x s/ juros de <?php echo(money_format('%n',$precoreal/$num_parcelas));?></span>
-              <span class="promo_5_pagseguro">+ 5% de desconto à vista (PagSeguro)</span>
-            <?php
-          }
+            // system/helpers/calc.php
+            echo getDiscountMessageBasedOnPriceValue($product['_special'], 5, 5, 50);
           ?>
           <?php } ?>
           <?php if ($product['tax']) { ?>
