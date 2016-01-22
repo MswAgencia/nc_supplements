@@ -15,4 +15,4 @@ $_['text_account']      = 'Minha Conta';
 $_['text_order']        = 'Histórico de Pedido';
 $_['text_wishlist']     = 'Lista de Desejo';
 $_['text_newsletter']   = 'Informativo';
-$_['text_powered']      = 'Desenvolvido por <a href="http://mswagencia.com.br">MSW Agência</a><br /> %s &copy; %s  - Todos os Direitos Reservados.';
+$_['text_powered']      = 'Desenvolvido por <a href="http://mswagencia.com.br">MSW Agência</a><br /> %s &copy; %s  - Todos os Direitos Reservados - Razão Social: ADRIANO MENEZES DE AZEVEDO - CPNJ: 18.752.757/0001-05 - Telefone: (51) 3421-5443';
