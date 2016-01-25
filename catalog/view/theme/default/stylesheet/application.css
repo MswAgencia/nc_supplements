@@ -63,6 +63,22 @@ header {
     color: #EEE
 }
 
+.product-layout.product-list .product-thumb .product-grid-badge {
+  display: none;
+}
+
+.product-layout.product-list .product-thumb .product-list-badge {
+  display: block;
+}
+
+.product-layout.product-grid .product-thumb .product-grid-badge {
+  display: block;
+}
+
+.product-layout.product-grid .product-thumb .product-list-badge {
+  display: none;
+}
+
 .product-thumb:hover {
     border-color: #e60000
 }

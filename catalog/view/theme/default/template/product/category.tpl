@@ -96,11 +96,11 @@
         <div class="product-layout product-list col-xs-12">
           <div class="product-thumb">
             <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
-
-            <?= getBadgeHtml($product['_price'], $product['_special'], getMinimumPriceForFreeShipping()) ?>
+            <div class="product-grid-badge"><?= getBadgeHtml($product['_price'], $product['_special'], getMinimumPriceForFreeShipping()) ?></div>
 
             <div>
               <div class="caption">
+                <div class="product-list-badge"><?= getBadgeHtml($product['_price'], $product['_special'], getMinimumPriceForFreeShipping()) ?></div>
                 <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h4>
                 <p><?php echo $product['description']; ?></p>
                 <?php if ($product['rating']) { ?>
