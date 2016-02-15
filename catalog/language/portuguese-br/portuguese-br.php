@@ -15,6 +15,7 @@ $_['text_yes']              = 'Sim';
 $_['text_no']               = 'Não';
 $_['text_none']             = ' --- Vazio --- ';
 $_['text_select']           = ' --- Selecione --- ';
+$_['text_starting_from']    = 'A partir de ';
 $_['text_all_zones']        = 'Todas Regiões';
 $_['text_pagination']       = 'Exibir %d de %d  <!-- %d --> (%d página(s))';
 $_['text_loading']          = 'Carregando...';
