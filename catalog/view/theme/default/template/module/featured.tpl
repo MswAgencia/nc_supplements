@@ -28,13 +28,13 @@
           <?php echo $product['price']; ?>
           <?php
             // system/helpers/calc.php
-            echo getDiscountMessageBasedOnPriceValue($product['_price'], 5, 5, 50);
+            echo getDiscountMessageBasedOnPriceValue($product['_price'], 5, 4);
           ?>
           <?php } else { ?>
           <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
           <?php
             // system/helpers/calc.php
-            echo getDiscountMessageBasedOnPriceValue($product['_special'], 5, 5, 50);
+            echo getDiscountMessageBasedOnPriceValue($product['_special'], 5, 4);
           ?>
           <?php } ?>
           <?php if ($product['tax']) { ?>
