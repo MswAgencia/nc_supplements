@@ -1,7 +1,7 @@
 <modification>
 <id><![CDATA[Option To Product]]></id>
-<version><![CDATA[4.1]]></version>
-<opencart><![CDATA[2.0.0.0]]></opencart>
+<version><![CDATA[4.3]]></version>
+<opencart><![CDATA[2.0.3.X]]></opencart>
 <vqmver><![CDATA[2.5.1]]></vqmver>
 <author><![CDATA[Raul Marosan]]></author>
 <file name="admin/model/catalog/product.php">
@@ -411,13 +411,13 @@ if (isset($data['product_option'])) {
 </operation>
 <operation>
 <search position="replace"><![CDATA[
-$data = array_merge($data, array('product_attribute' => $this->getProductAttributes($product_id)));
+$data['product_attribute'] = $this->getProductAttributes($product_id);
 ]]></search>
 <add trim="true"><![CDATA[
-$data = array_merge($data, array('otp_options' => $this->getOtpOptions($product_id)));
-$data = array_merge($data, array('image_swap' => $this->getImageSwap($product_id)));
-$data = array_merge($data, array('otp_copy' => true));
-$data = array_merge($data, array('product_attribute' => $this->getProductAttributes($product_id)));
+$data['otp_options'] = $this->getOtpOptions($product_id);
+$data['image_swap'] = $this->getImageSwap($product_id);
+$data['otp_copy'] = true;
+$data['product_attribute'] = $this->getProductAttributes($product_id);
 ]]></add>
 </operation>
 <operation>
@@ -464,7 +464,7 @@ public function index() {
 ]]></search>
 <add trim="true"><![CDATA[
 if ($this->config->get('config_otp_tool')) {
-	$data['otp_categories'] = $this->model_catalog_product->getOtpCategories();
+	$data['otp_categories'] = $this->model_catalog_product->getOtpCategories();	
 }
 ]]></add>
 </operation>
@@ -941,27 +941,27 @@ $('#upload-otp').on('click', function() {
 	$('#form-upload input[name=\'file\']').on('change', function() {
 		$.ajax({
 			url: 'index.php?route=catalog/product/uploadotp&token=<?php echo $token; ?>',
-			type: 'post',
+			type: 'post',		
 			dataType: 'json',
 			data: new FormData($(this).parent()[0]),
 			cache: false,
 			contentType: false,
-			processData: false,
+			processData: false,		
 			beforeSend: function() {
 				$('#upload-otp').button('loading');
 			},
 			complete: function() {
 				$('#upload-otp').button('reset');
-			},
+			},	
 			success: function(json) {
 				if (json['error']) {
 					alert(json['error']);
-				}
+				}				
 				if (json['success']) {
-					alert(json['success']);
+					alert(json['success']);		
 					$('input[name=\'filename\']').attr('value', json['filename']);
 				}
-			},
+			},			
 			error: function(xhr, ajaxOptions, thrownError) {
 				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
 			}
@@ -997,27 +997,27 @@ $('#upload-otp-img').on('click', function() {
 	$('#form-upload input[name=\'file\']').on('change', function() {
 		$.ajax({
 			url: 'index.php?route=catalog/product/uploadotp&token=<?php echo $token; ?>',
-			type: 'post',
+			type: 'post',		
 			dataType: 'json',
 			data: new FormData($(this).parent()[0]),
 			cache: false,
 			contentType: false,
-			processData: false,
+			processData: false,		
 			beforeSend: function() {
 				$('#upload-otp-img').button('loading');
 			},
 			complete: function() {
 				$('#upload-otp-img').button('reset');
-			},
+			},	
 			success: function(json) {
 				if (json['error']) {
 					alert(json['error']);
-				}
+				}				
 				if (json['success']) {
-					alert(json['success']);
+					alert(json['success']);		
 					$('input[name=\'filename-img\']').attr('value', json['filename']);
 				}
-			},
+			},			
 			error: function(xhr, ajaxOptions, thrownError) {
 				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
 			}
@@ -1053,27 +1053,27 @@ $('#upload-otp-model').on('click', function() {
 	$('#form-upload input[name=\'file\']').on('change', function() {
 		$.ajax({
 			url: 'index.php?route=catalog/product/uploadotp&token=<?php echo $token; ?>',
-			type: 'post',
+			type: 'post',		
 			dataType: 'json',
 			data: new FormData($(this).parent()[0]),
 			cache: false,
 			contentType: false,
-			processData: false,
+			processData: false,		
 			beforeSend: function() {
 				$('#upload-otp-model').button('loading');
 			},
 			complete: function() {
 				$('#upload-otp-model').button('reset');
-			},
+			},	
 			success: function(json) {
 				if (json['error']) {
 					alert(json['error']);
-				}
+				}				
 				if (json['success']) {
-					alert(json['success']);
+					alert(json['success']);		
 					$('input[name=\'filename-model\']').attr('value', json['filename']);
 				}
-			},
+			},			
 			error: function(xhr, ajaxOptions, thrownError) {
 				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
 			}
@@ -1419,7 +1419,7 @@ function exportotpmodel() {
 		<?php $image_swap_row = 1000; ?>
 	<?php } ?>
 	</div>
-	<?php
+	<?php 
 	if (isset($_GET['product_id'])) { ?>
 		<script type="text/javascript">
 		$('#swap_option').on('change', function(){
@@ -1673,14 +1673,6 @@ $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "order_option WHERE ord
 <file name="admin/controller/sale/order.php">
 <operation>
 <search position="replace"><![CDATA[
-$option['type'] == 'image'
-]]></search>
-<add trim="true"><![CDATA[
-$option['type'] == 'image' || $option['type'] == 'list'
-]]></add>
-</operation>
-<operation>
-<search position="replace"><![CDATA[
 'product_id' => $product['product_id'],
 ]]></search>
 <add trim="true"><![CDATA[
@@ -1690,6 +1682,39 @@ $option['type'] == 'image' || $option['type'] == 'list'
 </operation>
 </file>
 <file name="admin/view/template/sale/order_form.tpl">
+<operation>
+<search position="replace"><![CDATA[
+<input type="hidden" name="product[<?php echo $product_row; ?>][product_id]" value="<?php echo $order_product['product_id']; ?>" />
+]]></search>
+<add trim="true"><![CDATA[
+<input type="hidden" name="product[<?php echo $product_row; ?>][product_id]" value="<?php echo $order_product['product_id']; ?>" />
+<input type="hidden" name="product[<?php echo $product_row; ?>][otp_id]" value="<?php echo $order_product['otp_id']; ?>" />
+]]></add>
+</operation>
+<operation>
+<search position="replace"><![CDATA[
+#tab-product input[name^=\'option\'][type=\'hidden\'],
+]]></search>
+<add trim="true"><![CDATA[
+#tab-product input[name^=\'otp_id\'][type=\'hidden\'], #tab-product input[name^=\'option\'][type=\'hidden\'],
+]]></add>
+</operation>
+<operation>
+<search position="replace"><![CDATA[
+$option['type'] == 'image'
+]]></search>
+<add trim="true"><![CDATA[
+$option['type'] == 'image' || $option['type'] == 'list'
+]]></add>
+</operation>
+<operation>
+<search position="replace"><![CDATA[
+|| option['type'] == 'image'
+]]></search>
+<add trim="true"><![CDATA[
+|| option['type'] == 'image' || option['type'] == 'list'
+]]></add>
+</operation>
 <operation>
 <search position="replace"><![CDATA[
 (option['type'] == 'image'
@@ -1752,7 +1777,7 @@ html += otphtml;
 <script type="text/javascript"><!--
 	$(document).ready(function(){
 		$(document).on('change', '.otp_select_0', function(){
-			if ($(this).val() != '') {
+			if ($(this).val() != '' && $('.otp_select_1').attr('option') !== undefined) {
 				$.ajax({
 					type: 'GET',
 					url: 'index.php?route=catalog/product/getotpchildvalues&token=<?php echo $token; ?>',
@@ -1765,7 +1790,7 @@ html += otphtml;
 			}
 		});
 		$(document).on('change', '.otp_select_1', function(){
-			if ($(this).val() != '') {
+			if ($(this).val() != '' && $('.otp_select_2').attr('option') !== undefined) {
 				$.ajax({
 					type: 'GET',
 					url: 'index.php?route=catalog/product/getotpgrandchildvalues&token=<?php echo $token; ?>',
@@ -1924,6 +1949,18 @@ $product_options = $this->model_catalog_product->getProductOptions($this->reques
 </operation>
 <operation>
 <search position="replace"><![CDATA[
+$this->cart->add($product['product_id'], $product['quantity'], $option);
+]]></search>
+<add trim="true"><![CDATA[
+$otp_id = 0;
+if (isset($product['otp_id'])) {
+	$otp_id = $product['otp_id'];
+}
+$this->cart->add($product['product_id'], $product['quantity'], $option, 0, $otp_id);
+]]></add>
+</operation>
+<operation>
+<search position="replace"><![CDATA[
 $this->cart->add($this->request->post['product_id'], $quantity, $option);
 ]]></search>
 <add trim="true"><![CDATA[
@@ -2006,7 +2043,7 @@ public function index() {
 				PRIMARY KEY (`id`)
 			) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;");
 		$this->db->query("ALTER TABLE `" . DB_PREFIX . "order_product` ADD `otp_id` int(11) NOT NULL");
-		$this->db->query("INSERT INTO `" . DB_PREFIX . "setting` (`store_id`, `group`, `key`, `value`, `serialized`) VALUES
+		$this->db->query("INSERT INTO `" . DB_PREFIX . "setting` (`store_id`, `code`, `key`, `value`, `serialized`) VALUES
 			(0, 'config', 'config_otp_stock', '1', 0),
 			(0, 'config', 'config_otp_extra', '1', 0),
 			(0, 'config', 'config_otp_price', '1', 0),
@@ -2017,8 +2054,8 @@ public function index() {
 			(0, 'config', 'config_otp_list_height', '24', 0),
 			(0, 'config', 'config_otp_list_radius', '0', 0),
 			(0, 'config', 'config_otp_bullet', '1', 0),
-			(0, 'config', 'config_otp_bullet_width', '18', 0),
-			(0, 'config', 'config_otp_bullet_height', '18', 0),
+			(0, 'config', 'config_otp_bullet_width', '24', 0),
+			(0, 'config', 'config_otp_bullet_height', '24', 0),
 			(0, 'config', 'config_otp_bullet_radius', '0', 0),
 			(0, 'config', 'config_otp_tool', '1', 0),
 			(0, 'config', 'config_otp_csv', ',', 0);");
@@ -2566,12 +2603,7 @@ public function getStartingFrom($product_id) {
 		if ($price > 0) {
 			$price_list[] = $price;
 		}
-		if ($this->customer->isLogged()) {
-			$customer_group_id = $this->customer->getCustomerGroupId();
-		} else {
-			$customer_group_id = $this->config->get('config_customer_group_id');
-		}
-		$query = $this->db->query("SELECT `price` FROM " . DB_PREFIX . "product_special WHERE `product_id` = '" . (int)$product_id . "' AND `customer_group_id` = '" . (int)$customer_group_id . "' AND ((`date_start` = '0000-00-00' OR `date_start` < NOW()) AND (`date_end` = '0000-00-00' OR `date_end` > NOW())) AND `price` > 0 ORDER BY `priority` ASC, `price` ASC LIMIT 1");
+		$query = $this->db->query("SELECT `price` FROM " . DB_PREFIX . "product_special WHERE `product_id` = '" . (int)$product_id . "' AND `customer_group_id` = '" . (int)$this->config->get('config_customer_group_id') . "' AND ((`date_start` = '0000-00-00' OR `date_start` < NOW()) AND (`date_end` = '0000-00-00' OR `date_end` > NOW())) AND `price` > 0 ORDER BY `priority` ASC, `price` ASC LIMIT 1");
 		if ($query->num_rows) {
 			$price_list[] = $price;
 			$price = $query->row['price'];
@@ -2779,7 +2811,7 @@ if (!empty($swap_images)) {
 		if ($swap_element['image'] == $product_info['image']) {
 			unset($swap_images[$key]);
 			$main_title = $swap_element['name'];
-		}
+		} 
 	}
 	$results = $swap_images;
 }
@@ -3387,10 +3419,10 @@ if (isset($this->request->post['option'])) {
 </operation>
 <operation>
 <search position="replace"><![CDATA[
-$this->cart->add($this->request->post['product_id'], $this->request->post['quantity'], $option, $recurring_id);
+$this->cart->add($this->request->post['product_id'], $quantity, $option, $recurring_id);
 ]]></search>
 <add trim="true"><![CDATA[
-$this->cart->add($this->request->post['product_id'], $this->request->post['quantity'], $option, $recurring_id, $otp, $swap);
+$this->cart->add($this->request->post['product_id'], $quantity, $option, $recurring_id, $otp, $swap);
 ]]></add>
 </operation>
 <operation>
@@ -3438,6 +3470,14 @@ $key = base64_encode(serialize($product));
 $option_data = array();
 ]]></search>
 <add trim="true"><![CDATA[
+]]></add>
+</operation>
+<operation>
+<search position="replace"><![CDATA[
+$option_query->row['type'] == 'image'
+]]></search>
+<add trim="true"><![CDATA[
+$option_query->row['type'] == 'image' || $option_query->row['type'] == 'list'
 ]]></add>
 </operation>
 <operation>
@@ -3672,11 +3712,20 @@ reward = '" . (int)$product['reward'] . "', otp_id = '" . (int)$product['otp_id'
 </operation>
 <operation>
 <search position="replace"><![CDATA[
-$this->db->query("UPDATE " . DB_PREFIX . "product SET
+$this->db->query("UPDATE " . DB_PREFIX . "product SET quantity = (quantity -
 ]]></search>
 <add trim="true"><![CDATA[
-$this->db->query("UPDATE `" . DB_PREFIX . "otp_data` SET `quantity` = (quantity - " . (int)(int)$order_product['quantity'] . ") WHERE `otp_id` = '" . (int)$order_product['otp_id'] . "' AND subtract = '1' LIMIT 1");
-$this->db->query("UPDATE " . DB_PREFIX . "product SET
+$this->db->query("UPDATE `" . DB_PREFIX . "otp_data` SET `quantity` = (quantity - " . (int)$order_product['quantity'] . ") WHERE `otp_id` = '" . (int)$order_product['otp_id'] . "' AND subtract = '1' LIMIT 1");
+$this->db->query("UPDATE " . DB_PREFIX . "product SET quantity = (quantity -
+]]></add>
+</operation>
+<operation>
+<search position="replace"><![CDATA[
+$this->db->query("UPDATE `" . DB_PREFIX . "product` SET quantity = (quantity +
+]]></search>
+<add trim="true"><![CDATA[
+$this->db->query("UPDATE `" . DB_PREFIX . "otp_data` SET `quantity` = (quantity + " . (int)$product['quantity'] . ") WHERE `otp_id` = '" . (int)$product['otp_id'] . "' AND subtract = '1' LIMIT 1");
+$this->db->query("UPDATE `" . DB_PREFIX . "product` SET quantity = (quantity +
 ]]></add>
 </operation>
 </file>
