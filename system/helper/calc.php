@@ -12,6 +12,9 @@ function getDiscountPercentage($price, $special, $floor = true)
 
 function getDiscountMessageBasedOnPriceValue($actualProductPrice, $discountPercentage, $numberOfParcels, $minimumPriceToDisplayMessage)
 {
+  if(empty($minimumPriceToDisplayMessage))
+    $minimumPriceToDisplayMessage = getMinimumPriceToDisplayMessage();
+    
   if($actualProductPrice < $minimumPriceToDisplayMessage)
     return '';
 
@@ -27,4 +30,9 @@ function getDiscountMessageBasedOnPriceValue($actualProductPrice, $discountPerce
 function calcPriceWithDiscount($price, $discountPercentage)
 {
   return $price - ($price * ($discountPercentage / 100));
+}
+
+function getMinimumPriceToDisplayMessage()
+{
+  return 150.0;
 }
