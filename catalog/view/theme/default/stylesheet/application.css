@@ -28,6 +28,12 @@ header {
   float: left;
 }
 
+.promo-badge.produto-indisponivel {
+  background-color: rgb(255, 98, 0);
+  color: #EEE;
+  font-weight: bold;
+}
+
 .promo-badge.frete-gratis {
   background-color: rgb(39, 189, 191);
   color: #EEE;
@@ -35,7 +41,7 @@ header {
 }
 
 .promo-badge.desconto {
-  background-color: #0cb236;
+  background-color: rgb(12, 179, 54);
   color: #EEE;
   font-weight: bold;
 }
