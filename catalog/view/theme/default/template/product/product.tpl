@@ -73,7 +73,7 @@
               <h2><?php echo $price; ?></h2>
               <?php
                 // system/helpers/calc.php
-                echo getDiscountMessageBasedOnPriceValue($_price, 5, 5, 50);
+                echo getDiscountMessageBasedOnPriceValue($_price, 5, 4);
               ?>
               <span style="display:none;" itemprop="price"><?= $preco_rich;?></span>
             </li>
@@ -83,7 +83,7 @@
             <li><span style="text-decoration: line-through;"><?php echo $price; ?></span></li>
             <?php
               // system/helpers/calc.php
-              echo getDiscountMessageBasedOnPriceValue($_special, 5, 5, 50);
+              echo getDiscountMessageBasedOnPriceValue($_special, 5, 4);
             ?>
             <span style="display:none;" itemprop="price"><?= $special_rich;?></span>
             <li>
