@@ -68,6 +68,7 @@ class ControllerModuleFeatured extends Controller {
 						'price'       => $price,
             '_price' => $product_info['price'],
             '_special' => $product_info['special'],
+            'in_stock'    => ($product_info['quantity'] > 0)? true : false,
 						'special'     => $special,
 						'tax'         => $tax,
 						'rating'      => $rating,

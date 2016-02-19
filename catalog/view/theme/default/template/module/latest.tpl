@@ -4,7 +4,7 @@
   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
     <div class="product-thumb transition">
       <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
-
+      <?= (!$product['in_stock'])? getUnavailableProductBadge() : '' ?>
       <?= getBadgeHtml($product['_price'], $product['_special'], getMinimumPriceForFreeShipping()) ?>
 
       <div class="caption">
