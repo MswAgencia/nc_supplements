@@ -67,6 +67,7 @@
           <ul class="list-unstyled">
             <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
             <meta itemprop="priceCurrency" content="BRL" />
+            <?= (!$in_stock)? getUnavailableProductBadgeForProductPage() : '' ?>
             <?php if (!$special) { ?>
             <?= getBadgeHtmlForProductPage($_price, $_special, getMinimumPriceForFreeShipping()) ?>
             <li>

@@ -68,6 +68,7 @@ class ControllerModuleLatest extends Controller {
 					'price'       => $price,
           '_price'      => $result['price'],
           '_special'    => $result['special'],
+          'in_stock'    => ($result['quantity'] > 0)? true : false,
 					'special'     => $special,
 					'tax'         => $tax,
 					'rating'      => $rating,

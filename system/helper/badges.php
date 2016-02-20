@@ -17,6 +17,16 @@ function getBadgeHtml($price, $special, $minPriceForFreeShipping)
   }
 }
 
+function getUnavailableProductBadge()
+{
+  return '<div class="promo-badge produto-indisponivel">Indisponível</div>';
+}
+
+function getUnavailableProductBadgeForProductPage()
+{
+  return '<li><div class="promo-badge product-page produto-indisponivel"></div></li>';
+}
+
 function getBadgeHtmlForProductPage($price, $special, $minPriceForFreeShipping)
 {
   if($price >= $minPriceForFreeShipping and empty($special)) {

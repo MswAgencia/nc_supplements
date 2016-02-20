@@ -62,6 +62,7 @@ class ControllerModuleBestSeller extends Controller {
 					'special'     => $special,
           '_price'      => $result['price'],
           '_special'    => $result['special'],
+          'in_stock'    => ($result['quantity'] > 0)? true : false,
 					'tax'         => $tax,
 					'rating'      => $rating,
 					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id']),
