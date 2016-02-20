@@ -10,7 +10,7 @@ function getDiscountPercentage($price, $special, $floor = true)
   return number_format($percentual, 2, '.', '');
 }
 
-function getDiscountMessageBasedOnPriceValue($actualProductPrice, $discountPercentage, $numberOfParcels, $minimumPriceToDisplayMessage)
+function getDiscountMessageBasedOnPriceValue($actualProductPrice, $discountPercentage, $numberOfParcels, $minimumPriceToDisplayMessage = null)
 {
   if(empty($minimumPriceToDisplayMessage))
     $minimumPriceToDisplayMessage = getMinimumPriceToDisplayMessage();
