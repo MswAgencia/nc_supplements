@@ -14,7 +14,7 @@ function getDiscountMessageBasedOnPriceValue($actualProductPrice, $discountPerce
 {
   if(empty($minimumPriceToDisplayMessage))
     $minimumPriceToDisplayMessage = getMinimumPriceToDisplayMessage();
-    
+
   if($actualProductPrice < $minimumPriceToDisplayMessage)
     return '';
 
@@ -24,7 +24,7 @@ function getDiscountMessageBasedOnPriceValue($actualProductPrice, $discountPerce
   $formattedParceledPrice = number_format($parceledPrice, 2, ',', '');
   $formattedPriceWithDiscount = number_format($priceWithDiscount, 2, ',', '');
 
-  return "<span class=\"pagseguroPrice\">em até {$numberOfParcels}x sem juros de R$ {$formattedParceledPrice} ou {$formattedPriceWithDiscount} à vista!</span>";
+  return "<span class=\"pagseguroPrice\">em até {$numberOfParcels}x sem juros de R$ {$formattedParceledPrice} ou R$ {$formattedPriceWithDiscount} à vista!</span>";
 }
 
 function calcPriceWithDiscount($price, $discountPercentage)
