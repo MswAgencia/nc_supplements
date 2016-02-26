@@ -313,6 +313,10 @@ footer p a {
     color: #B20C14
 }
 
+.alert {
+  font-weight: bold;
+}
+
 @media screen and (max-width: 480px) {
   .promo-badge.two {
     width: 100%;
